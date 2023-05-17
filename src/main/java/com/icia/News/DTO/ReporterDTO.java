@@ -13,12 +13,10 @@ import java.util.List;
 
 public class ReporterDTO {
     private Long id;
-    private Long ReporterLevel;
-    private String ReporterEmail;
-    private String ReporterPassword;
-    private String ReporterMobile;
-    private List<MultipartFile> ReporterPicture;
+    private int reporterLevel;
+    private String reporterEmail;
+    private String reporterPassword;
+    private String reporterMobile;
+    private List<MultipartFile> reporterPicture;
     private int fileAttached;
-    private int like;
-    private int hate;
 }

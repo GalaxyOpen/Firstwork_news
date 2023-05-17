@@ -14,14 +14,14 @@ import java.util.List;
 
 public class ArticleDTO {
     private Long id;
-    private String ArticleTitle;
-    private String ArticleWriter;
-    private String ArticleContents;
-    private int ArticleHits;
-    private Timestamp ArticleUploadingTime;
+    private String articleTitle;
+    private String articleWriter;
+    private String articleContents;
+    private int articleHits;
+    private Timestamp articleUploadingTime;
     private int fileAttached;
-    private List<MultipartFile> ArticlePicture;
+    private List<MultipartFile> articlePicture;
     private Long reporterId;
-    private int like;
+    private int good;
     private int hate;
 }

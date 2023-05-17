@@ -11,7 +11,7 @@ import lombok.ToString;
 public class ArticlePictureDTO {
     private Long Id;
     private String originalFileName;
-    private Long storedFileName;
+    private String storedFileName;
     private int fileAttached ;
     private Long ArticleId;
 }

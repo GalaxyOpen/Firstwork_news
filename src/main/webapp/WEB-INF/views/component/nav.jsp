@@ -10,10 +10,13 @@
         <c:choose>
         <c:when test="${sessionScope.loginEmail == null}">
         <li>
-        <a href="/news/list">기사목록</a>
+        <a href="/article/list">기사목록</a>
         </li>
         <li>
         <a href="/member/save">회원가입</a>
+        </li>
+        <li>
+        <a href="/reporter/save">기자회원 가입</a>
         </li>
         <li>
         <a href="/member/login">로그인</a>

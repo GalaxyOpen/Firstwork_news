@@ -3,7 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.icia.News.DTO.ArticleDTO" alias="member"/>
+        <typeAlias type="com.icia.News.DTO.ArticleDTO" alias="article"/>
+        <typeAlias type="com.icia.News.DTO.MemberDTO" alias="member"/>
+
 
     </typeAliases>
 </configuration>
