@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="../resources/css/main.css">
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
@@ -14,7 +16,7 @@
         <p id="password-area"></p>
         Name: <input type="text" id="memberName" name="memberName" placeholder="이름을 입력해주세요">
         <p id="name-area"></p>
-        Phone number : <input type="text" id="memberMobile" name="memberMobile" placeholder="010-xxxx-xxxx">
+        Phone number : <input type="text" id="memberMobile" name="memberMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx">
         <p id="mobile-area"></p>
         <input type="submit" value="회원가입">
     </form>
@@ -27,7 +29,7 @@
         const email_check = document.getElementById("email-area");
         $.ajax({
             type: "post",
-            url: "/email_check",
+            url: "/memberIdCheck",
             data: {
                 "memberEmail":typingEmail
             },

@@ -9,23 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.16. 프로젝트 제출 전">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/MemberDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ReporterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/Member-Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberSave.jsp" afterDir="false" />
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.17. 프로젝트 제출 전&#10;일반 회원 가입 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ArticleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ArticleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ArticlePictureDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ArticlePictureDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ReporterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ReporterDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Member-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Member-Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberSave.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +39,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PqwywyAC4cAJyMLEq9uyCVhbEk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -187,7 +180,7 @@
       <updated>1684198179008</updated>
       <workItem from="1684198180075" duration="4488000" />
       <workItem from="1684209818128" duration="8444000" />
-      <workItem from="1684280465230" duration="5274000" />
+      <workItem from="1684280465230" duration="7043000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -196,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684219145823</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2023.05.17. 프로젝트 제출 전&#10;일반 회원 가입 완료">
+      <created>1684287860578</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684287860578</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +204,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2023.05.16. 프로젝트 제출 전" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.16. 프로젝트 제출 전" />
+    <MESSAGE value="2023.05.17. 프로젝트 제출 전&#10;일반 회원 가입 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.17. 프로젝트 제출 전&#10;일반 회원 가입 완료" />
   </component>
 </project>

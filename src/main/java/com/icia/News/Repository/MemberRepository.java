@@ -12,4 +12,8 @@ public class MemberRepository {
     public void save(MemberDTO memberDTO) {
         sql.insert("Member.save", memberDTO);
     }
+
+    public MemberDTO findByMemberEmail(String memberEmail) {
+       return sql.selectOne("Member.findByMemberEmail", memberEmail);
+    }
 }

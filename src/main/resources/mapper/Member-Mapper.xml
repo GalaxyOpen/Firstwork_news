@@ -3,10 +3,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Member">
-    <insert id="save">
+    <insert id="save" parameterType="member">
         insert into news_member(memberEmail, memberPassword, memberName, memberMobile)
         values (#{memberEmail},#{memberPassword},#{memberName},#{memberMobile})
     </insert>
+
+    <select id="findByMemberEmail" parameterType="String" resultType="member">
+        select *from news_member where memberEmail=#{memberEmail}
+    </select>
+
+
 
 </mapper>
 
