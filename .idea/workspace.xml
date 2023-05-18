@@ -9,9 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.18. 기획안 제출 후&#10;기자 회원 정규식을 이메일과 비밀번호, 전화번호에 적용 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/LikeDTO.java" afterDir="false" />
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.18. 기획안 제출 후&#10;좋아요 DTO 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberSave.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterSave.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +200,7 @@
       <workItem from="1684198180075" duration="4488000" />
       <workItem from="1684209818128" duration="8444000" />
       <workItem from="1684280465230" duration="22129000" />
-      <workItem from="1684366108159" duration="9859000" />
+      <workItem from="1684366108159" duration="11797000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -226,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684374555613</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2023.05.18. 기획안 제출 후&#10;좋아요 DTO 추가">
+      <created>1684386784646</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684386784646</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +248,7 @@
     <MESSAGE value="2023.05.17. 프로젝트 제출 전&#10;일반 회원 가입 완료" />
     <MESSAGE value="2023.05.17. 프로젝트 제출 전&#10;일반 회원 정규식을 이메일과 비밀번호, 전화번호에 적용 완료" />
     <MESSAGE value="2023.05.18. 기획안 제출 후&#10;기자 회원 정규식을 이메일과 비밀번호, 전화번호에 적용 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.18. 기획안 제출 후&#10;기자 회원 정규식을 이메일과 비밀번호, 전화번호에 적용 완료" />
+    <MESSAGE value="2023.05.18. 기획안 제출 후&#10;좋아요 DTO 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.18. 기획안 제출 후&#10;좋아요 DTO 추가" />
   </component>
 </project>

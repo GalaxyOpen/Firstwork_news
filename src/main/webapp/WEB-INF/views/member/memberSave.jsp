@@ -4,6 +4,7 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
@@ -11,15 +12,27 @@
 <div id="section">
     <div style="display: grid; place-items: center">
     <form action="/member/save" method="post">
-        Email: <input type="text" id="memberEmail" name="memberEmail" onblur="email_duplicate_check()" placeholder="아이디를 입력해주세요">
+        <div class="mb-3">
+        <label for="memberEmail" class="form-label">아이디(이메일):</label>
+        <input type="text" class="form-control" id="memberEmail" name="memberEmail" onblur="email_duplicate_check()" placeholder="아이디를 입력해주세요">
         <p id="email-area"></p>
-        Password: <input type="text" id="memberPassword" name="memberPassword" onblur="password_check()" placeholder="비밀번호를 입력해주세요">
+        </div>
+        <div class="mb-3">
+        <label for="memberPassword" class="form-label">비밀번호:</label>
+        <input type="text" id="memberPassword" class="form-control" name="memberPassword" onblur="password_check()" placeholder="비밀번호를 입력해주세요">
         <p id="password-area"></p>
-        Name: <input type="text" id="memberName" name="memberName" placeholder="이름을 입력해주세요">
+        </div>
+        <div class="mb-3">
+        <label for="memberName" class="form-label">이름:</label>
+        <input type="text" id="memberName" class="form-control" name="memberName" placeholder="이름을 입력해주세요">
         <p id="name-area"></p>
-        Phone number : <input type="text" id="memberMobile" name="memberMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx">
+        </div>
+        <div class="mb-3">
+        <label for="memberMobile" class="form-label">Phone number :</label>
+        <input type="text" id="memberMobile" class="form-control" name="memberMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx">
         <p id="mobile-area"></p>
-        <input type="submit" value="회원가입">
+        </div>
+        <input type="submit" class="btn btn-dark" value="회원가입">
     </form>
     </div>
 </div>
