@@ -4,24 +4,40 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
 <div id="section">
     <div style="display: grid; place-items: center">
         <form action="/reporter/save" method="post" enctype="multipart/form-data">
-            ID: <input type="text" id="reporter_Email" name="reporterEmail" onblur="reporter_duplicate_check()" placeholder="아이디를 입력해주세요"><br>
+            <div class="mb-3">
+            <label for="reporter_Email" class="form-label"> ID: </label>
+            <input type="text" id="reporter_Email" name="reporterEmail" onblur="reporter_duplicate_check()" placeholder="아이디를 입력해주세요"><br>
             <p id="email-area"></p>
-            비밀번호: <input type="text" id="reporterPassword" name="reporterPassword" onblur="password_check()" placeholder="비밀번호를 입력해주세요"><br>
+            </div>
+            <div class="mb-3">
+            <label for="reporterPassword" class="form-label"> 비밀번호: </label>
+            <input type="text" id="reporterPassword" name="reporterPassword" onblur="password_check()" placeholder="비밀번호를 입력해주세요"><br>
             <p id="password-area"></p>
-            이름: <input type="text" id="reporterName" name="reporterName" placeholder="이름을 입력해주세요"><br>
+            </div>
+            <div class="mb-3">
+            <label for="reporterName" class="form-label"> 이름: </label>
+            <input type="text" id="reporterName" name="reporterName" placeholder="이름을 입력해주세요"><br>
             <p id="name-area"></p>
-            언론사: <input type="text" id="reporterMedia" name="reporterMedia" placeholder="언론사 기재"><br>
+            </div>
+            <div class="mb-3">
+            <label for="reporterMedia" class="form-label">언론사: </label>
+            <input type="text" id="reporterMedia" name="reporterMedia" placeholder="언론사 기재"><br>
             <p id="media-area"></p>
-            휴대전화 : <input type="text" id="reporterMobile" name="reporterMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx"><br>
+            </div>
+            <div class="mb-3">
+            <label for="reporterMobile" class="form-label">휴대전화 :</label>
+            <input type="text" id="reporterMobile" name="reporterMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx"><br>
             <p id="mobile-area"></p>
+            </div>
             사진 : <input type="file" name="reporterPicture" multiple><br>
-            <input type="submit" value="회원가입">
+            <input type="submit" class="btn btn-dark" value="회원가입">
         </form>
     </div>
 </div>
