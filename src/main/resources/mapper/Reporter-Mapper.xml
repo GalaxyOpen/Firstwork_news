@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Reporter">
+    <insert id="save" parameterType="reporter" useGeneratedKeys="true" keyProperty="id">
+        insert into news_reporter(reporterEmail, reporterPassword,reporterName,reporterMedia,reporterMobile,fileAttached)
+        values(#{reporterEmail},#{reporterPassword},#{reporterName},#{reporterMedia},#{reporterMobile},#{fileAttached})
+    </insert>
+
+    <insert id="saveFile" parameterType="reporterPicture">
+        insert into news_reporter_picture(originalFileName, storedFileName,fileAttached, reporterId)
+        values(#{originalFileName},#{storedFileName},#{fileAttached},#{reporterId})
+    </insert>
+
+    <select id="findByReporterEmail" parameterType="String" resultType="reporter">
+        select *from news_reporter where reporterEmail=#{reporterEmail}
+    </select>
+
+</mapper>
+
+
+

@@ -14,9 +14,12 @@ import java.util.List;
 public class ReporterDTO {
     private Long id;
     private int reporterLevel;
+    private String reporterName;
     private String reporterEmail;
     private String reporterPassword;
     private String reporterMobile;
     private List<MultipartFile> reporterPicture;
+    private String reporterMedia;
     private int fileAttached;
+
 }

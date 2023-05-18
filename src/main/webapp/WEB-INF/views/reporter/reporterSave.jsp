@@ -7,33 +7,35 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-
 <div id="section">
     <div style="display: grid; place-items: center">
-    <form action="/member/save" method="post">
-        Email: <input type="text" id="memberEmail" name="memberEmail" onblur="email_duplicate_check()" placeholder="아이디를 입력해주세요">
-        <p id="email-area"></p>
-        Password: <input type="text" id="memberPassword" name="memberPassword" onblur="password_check()" placeholder="비밀번호를 입력해주세요">
-        <p id="password-area"></p>
-        Name: <input type="text" id="memberName" name="memberName" placeholder="이름을 입력해주세요">
-        <p id="name-area"></p>
-        Phone number : <input type="text" id="memberMobile" name="memberMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx">
-        <p id="mobile-area"></p>
-        <input type="submit" value="회원가입">
-    </form>
+        <form action="/reporter/save" method="post" enctype="multipart/form-data">
+            ID: <input type="text" id="reporter_Email" name="reporterEmail" onblur="reporter_duplicate_check()" placeholder="아이디를 입력해주세요"><br>
+            <p id="email-area"></p>
+            비밀번호: <input type="text" id="reporterPassword" name="reporterPassword" onblur="password_check()" placeholder="비밀번호를 입력해주세요"><br>
+            <p id="password-area"></p>
+            이름: <input type="text" id="reporterName" name="reporterName" placeholder="이름을 입력해주세요"><br>
+            <p id="name-area"></p>
+            언론사: <input type="text" id="reporterMedia" name="reporterMedia" placeholder="언론사 기재"><br>
+            <p id="media-area"></p>
+            휴대전화 : <input type="text" id="reporterMobile" name="reporterMobile" onblur="mobile_check()" placeholder="010-xxxx-xxxx"><br>
+            <p id="mobile-area"></p>
+            사진 : <input type="file" name="reporterPicture" multiple><br>
+            <input type="submit" value="회원가입">
+        </form>
     </div>
 </div>
 <%@include file="../component/footer.jsp"%>
 </body>
 <script>
-    const email_duplicate_check =()=>{
-        const typingEmail = document.getElementById("memberEmail").value;
+    const reporter_duplicate_check =()=>{
+        const typing = document.getElementById("reporter_Email").value;
         const email_check = document.getElementById("email-area");
         $.ajax({
             type: "post",
-            url: "/memberIdCheck",
+            url: "/reporterIdCheck",
             data: {
-                "memberEmail":typingEmail
+                "reporterEmail":typing
             },
             success: function(){
                 email_check.innerHTML="사용가능한 이메일 주소입니다.";
@@ -46,7 +48,7 @@
         })
     }
     const password_check =()=>{
-        const password = document.getElementById("memberPassword").value;
+        const password = document.getElementById("reporterPassword").value;
         const passwordCheck = document.getElementById("password-area");
         const exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!#])[A-Za-z\d-_!#]{8,16}$/;
 
@@ -62,7 +64,7 @@
         }
     }
     const mobile_check=()=>{
-        const mobile=document.getElementById("memberMobile").value;
+        const mobile=document.getElementById("reporterMobile").value;
         const mobileCheck =document.getElementById("mobile-area")
         const exp = /^\d{3}-\d{4}-\d{4}$/
         if(mobile.match(exp)){

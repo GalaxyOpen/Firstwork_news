@@ -5,6 +5,9 @@
     <typeAliases>
         <typeAlias type="com.icia.News.DTO.ArticleDTO" alias="article"/>
         <typeAlias type="com.icia.News.DTO.MemberDTO" alias="member"/>
+        <typeAlias type="com.icia.News.DTO.ReporterDTO" alias="reporter"/>
+        <typeAlias type="com.icia.News.DTO.ReporterPictureDTO" alias="reporterPicture"/>
+
 
 
     </typeAliases>

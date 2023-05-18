@@ -13,6 +13,6 @@ public class ReporterPictureDTO {
     private String originalFileName;
     private String storedFileName;
     private String fileAttached;
-    private Long ReportId;
+    private Long reporterId;
 
 }

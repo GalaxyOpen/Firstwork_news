@@ -12,8 +12,11 @@
 <body>
 <%@include file="./component/header.jsp"%>
 <%@include file="./component/nav.jsp"%>
-<h2>News</h2>
+<h2 style="dsiplay: flex; text-align: center;">Reporter vs Comment</h2>
 
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="./resources/images/이의있소.png">
+</div>
 
 
 <%@include file="./component/footer.jsp"%>
