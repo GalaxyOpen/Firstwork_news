@@ -12,17 +12,9 @@
   ${sessionScope.loginEmail} 님 환영해요!
 
   <button onclick="update('${member.id}')">개인정보 수정하기</button><br>
-    <c:if test="${sessionScope.loginEmail == '${member.id}'}">
         <a href="/member/save">글 작성하기</a><br>
         <a href="/article/list">글 목록보기</a><br>
         <a href="/member/logout">로그아웃</a><br>
-    </c:if>
-
-    <c:if test="${sessionScope.loginEmail == '${reporter.id}'}">
-        <a href="/reporter/save">글 작성하기</a><br>
-        <a href="/article/list">글 목록보기</a><br>
-        <a href="/reporter/logout">로그아웃</a><br>
-    </c:if>
 
     <c:if test="${sessionScope.loginEmail == 'admin'}">
         <a href="/member/admin">회원목록</a><br>
