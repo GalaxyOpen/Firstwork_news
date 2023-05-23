@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Article">
+    <insert id="save" parameterType="article" useGeneratedKeys="true" keyProperty="id">
+        insert into news_article (articleTitle, articleWriter, articleContents, fileAttached, reporterId)
+        values(#{articleTitle},#{articleWrtier},#{articleContents},#{fileAttached},#{reporterId})
+    </insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
