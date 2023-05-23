@@ -19,7 +19,10 @@
         <a href="/reporter/save">기자회원 가입</a>
         </li>
         <li>
-        <a href="/member/login">로그인</a>
+        <a href="/member/login">댓글 회원 로그인</a>
+        </li>
+        <li>
+        <a href="/reporter/login">기자 회원 로그인</a>
         </li>
         </c:when>
         <c:otherwise>

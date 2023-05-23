@@ -16,4 +16,13 @@ public class MemberService {
     public MemberDTO findByMemberEmail(String memberEmail) {
         return memberRepository.findByMemberEmail(memberEmail);
     }
+
+    public boolean login(MemberDTO memberDTO) {
+        MemberDTO dto = memberRepository.login(memberDTO);
+        if(dto!=null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

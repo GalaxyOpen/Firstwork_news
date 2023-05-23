@@ -6,10 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -34,6 +37,16 @@ public class MemberController {
             return new ResponseEntity<>(memberDTO, HttpStatus.OK);
         }else{
             return new ResponseEntity<>(memberDTO, HttpStatus.CONFLICT);
+        }
+    }
+    @PostMapping("/member/login")
+    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session){
+        boolean loginResult = memberService.login(memberDTO);
+        if(loginResult){
+            session.setAttribute("loginEmail", memberDTO.getMemberEmail());
+            return "/member/memberHome";
+        }else{
+            return "/member/memberLogin";
         }
     }
 
