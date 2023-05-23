@@ -64,6 +64,6 @@
         loginArea.innerHTML = "<a href='/mypage>' style='color: black;'>"+loginEmail +"님 어서오세요!</a>"+
                                 "<a href='/member/logout'>logout</a>";
     }else {
-        loginArea.innerHTML = "<a href='/indew'>처음으로</a>";
+        loginArea.innerHTML = "<a href=/index>처음으로</a>";
     }
 </script>
