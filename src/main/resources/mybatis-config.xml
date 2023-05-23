@@ -8,7 +8,5 @@
         <typeAlias type="com.icia.News.DTO.ReporterDTO" alias="reporter"/>
         <typeAlias type="com.icia.News.DTO.ReporterPictureDTO" alias="reporterPicture"/>
 
-
-
     </typeAliases>
 </configuration>

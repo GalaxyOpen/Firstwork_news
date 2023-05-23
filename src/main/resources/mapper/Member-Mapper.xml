@@ -13,7 +13,7 @@
     </select>
 
     <select id="login" parameterType="member" resultType="member">
-        select*from news_member where memberEmail=#{memberEmail} and memberPassword=#{memberPassword}
+        select *from news_member where memberEmail=#{memberEmail} and memberPassword=#{memberPassword}
     </select>
 
 

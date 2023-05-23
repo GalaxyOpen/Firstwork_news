@@ -39,9 +39,14 @@ public class MemberController {
             return new ResponseEntity<>(memberDTO, HttpStatus.CONFLICT);
         }
     }
+    @GetMapping("/member/login")
+    public String loginForm(){
+        return "/member/memberLogin";
+    }
     @PostMapping("/member/login")
     public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session){
         boolean loginResult = memberService.login(memberDTO);
+        System.out.println("memberDTO = " + memberDTO);
         if(loginResult){
             session.setAttribute("loginEmail", memberDTO.getMemberEmail());
             return "/member/memberHome";
