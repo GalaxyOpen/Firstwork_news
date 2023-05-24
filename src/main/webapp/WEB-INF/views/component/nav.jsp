@@ -67,7 +67,7 @@
     console.log(loginEmail.length);
 
     if(loginEmail.length !=0){
-        loginArea.innerHTML = "<a href='/reporter/mypage>' style='color: black;'>"+loginEmail +"님 어서오세요!</a>"+
+        loginArea.innerHTML = "<a href='/reporter/mypage' style='color: black;'>"+loginEmail +"님 어서오세요!</a>"+
             "<a href='/reporter/logout'>logout</a>";
     }else {
         loginArea.innerHTML = "<a href=/>처음으로</a>";
