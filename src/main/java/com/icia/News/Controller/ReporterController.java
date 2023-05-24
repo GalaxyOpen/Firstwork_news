@@ -75,6 +75,10 @@ public class ReporterController {
         reporterService.update(reporterDTO);
         return "/reporter/reporterHome";
     }
+    @GetMapping("/reporter/myPage")
+    public String myPage(){
+        return "/reporter/reporterHome";
+    }
 
 
 }

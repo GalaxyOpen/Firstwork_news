@@ -75,5 +75,9 @@ public class MemberController {
         memberService.update(memberDTO);
         return "/member/memberHome";
     }
+    @GetMapping("/member/myPage")
+    public String myPage(){
+        return "/member/memberHome";
+    }
 
 }

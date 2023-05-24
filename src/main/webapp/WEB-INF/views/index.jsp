@@ -11,7 +11,7 @@
 </head>
 <body>
 <%@include file="./component/header.jsp"%>
-<%@include file="component/member_nav.jsp"%>
+<%@include file="./component/member_nav.jsp"%>
 <h2 style="dsiplay: flex; text-align: center;">Reporter vs Keyboard Warrior</h2>
 
 <div style="display: flex; justify-content: center; align-items: center;">

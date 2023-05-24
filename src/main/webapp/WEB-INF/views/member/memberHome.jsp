@@ -15,11 +15,12 @@
         <a href="/article/save">글 작성하기</a><br>
         <a href="/article/list">글 목록보기</a><br>
         <a href="/member/logout">로그아웃</a><br>
+        <a href="/member/myPage">처음으로 돌아가기</a><br>
 
     <c:if test="${sessionScope.loginEmail == 'admin'}">
         <a href="/member/admin">회원목록</a><br>
     </c:if>
-  <a href="/">처음으로 돌아가기</a><br>
+
 </div>
 <%@include file="../component/footer.jsp"%>
 </body>
