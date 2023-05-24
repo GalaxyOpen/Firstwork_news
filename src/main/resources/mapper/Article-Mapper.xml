@@ -17,6 +17,22 @@
         select*from news_article
     </select>
 
+    <select id="paging" parameterType="java.util.HashMap" resultType="article">
+        select*from news_article order by id desc limit #{start}, #{limit}
+    </select>
+
+    <select id="count" resultType="Integer">
+        select count(id) from news_article
+    </select>
+
+    <select id="searchCount" parameterType="java.util.HashMap" resultType="Integer">
+        select count(id) from news_article where ${type} concat('%',#{q},'%')
+    </select>
+
+    <select id="search" parameterType="java.util.HashMap" resultType="article">
+        select*from news_article where ${type} like concat('%',#{q},'%') order by id desc limit #{start}, #{limit}
+    </select>
+
 </mapper>
 
 

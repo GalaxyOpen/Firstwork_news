@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class ArticleRepository {
@@ -23,5 +24,21 @@ public class ArticleRepository {
 
     public List<ArticleDTO> findAll() {
        return sql.selectList("Article.findAll");
+    }
+
+    public List<ArticleDTO> pagingList(Map<String, Integer> pagingParams) {
+        return sql.selectList("Article.paging", pagingParams);
+    }
+
+    public int articleCount() {
+        return sql.selectOne("Article.count");
+    }
+
+    public List<ArticleDTO> searchList(Map<String, Object> pagingParams) {
+        return sql.selectList("Article.search", pagingParams);
+    }
+
+    public int articleSearchCount(Map<String, Object> pagingParams) {
+        return sql.selectOne("Article.searchCount", pagingParams);
     }
 }
