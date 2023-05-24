@@ -9,15 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;기자 회원 수정 작업 완료">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;nav와 기자, 댓글 회원 mypage 작업 완료">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/artileDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/member_nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/member_nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/reporter_nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/reporter_nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberHome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterHome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleSave.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +199,7 @@
       <workItem from="1684280465230" duration="22129000" />
       <workItem from="1684366108159" duration="12869000" />
       <workItem from="1684814916471" duration="10295000" />
-      <workItem from="1684885451868" duration="6297000" />
+      <workItem from="1684885451868" duration="9322000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -318,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684889958754</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="2023.05.24. 기획안 제출 후&#10;nav와 기자, 댓글 회원 mypage 작업 완료">
+      <created>1684891861503</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684891861503</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +343,7 @@
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자/댓글회원 로그인/로그아웃 기능 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;댓글 회원 수정 작업 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 수정 작업 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;기자 회원 수정 작업 완료" />
+    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;nav와 기자, 댓글 회원 mypage 작업 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;nav와 기자, 댓글 회원 mypage 작업 완료" />
   </component>
 </project>

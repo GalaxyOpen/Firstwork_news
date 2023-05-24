@@ -7,11 +7,11 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-<%@include file="../component/member_nav.jsp"%>
+<%@include file="../component/reporter_nav.jsp"%>
 <div id="section">
   <form action="/article/save" method="post" enctype="multipart/form-data">
           제목 : <input type="text" name="articleTitle" placeholder="제목"><br>
-          작성자 : <input type="text" name="articleWriter" value="${sessionScope.loginEmail}"><br>
+          작성자 : <input type="text" name="articleWriter" value="${sessionScope.reporterLoginEmail}"><br>
           글 내용 : <textarea name="articleContents" cols="100" rows="10" placeholder="내용을 입력하세요"></textarea></textarea><br>
           파일 첨부 : <input type="file" name="articlePicture" multiple><br>
           <input type="submit" value="작성">
