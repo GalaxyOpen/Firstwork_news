@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;articleSave.jsp 일부 내용 수정 및 articleDetail 생성&#10;아직 함수 작업 및 Controller는 만들지 않음.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberHome.jsp" afterDir="false" />
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;reporter_nav.jsp + member_nav.jsp를 nav.jsp로 통합">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +197,7 @@
       <workItem from="1684280465230" duration="22129000" />
       <workItem from="1684366108159" duration="12869000" />
       <workItem from="1684814916471" duration="10295000" />
-      <workItem from="1684885451868" duration="13649000" />
+      <workItem from="1684885451868" duration="14000000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -329,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684896653788</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="2023.05.24. 기획안 제출 후&#10;reporter_nav.jsp + member_nav.jsp를 nav.jsp로 통합">
+      <created>1684903453389</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684903453389</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +357,7 @@
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 수정 작업 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;nav와 기자, 댓글 회원 mypage 작업 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articleSave.jsp 일부 내용 수정 및 articleDetail 생성&#10;아직 함수 작업 및 Controller는 만들지 않음." />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;articleSave.jsp 일부 내용 수정 및 articleDetail 생성&#10;아직 함수 작업 및 Controller는 만들지 않음." />
+    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;reporter_nav.jsp + member_nav.jsp를 nav.jsp로 통합" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;reporter_nav.jsp + member_nav.jsp를 nav.jsp로 통합" />
   </component>
 </project>

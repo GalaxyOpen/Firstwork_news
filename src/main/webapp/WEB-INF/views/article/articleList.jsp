@@ -14,23 +14,24 @@
 <%@include file="../component/header.jsp"%>
 <%@include file="../component/nav.jsp"%>
 <div id="section">
-  <form action="/board/list"></form>
-  <h2>게시판 리스트</h2>
+  <form action="/article/list"></form>
+  <h2>기사 리스트</h2>
   <table>
     <tr>
-      <th>번호</th>
-      <th>글 제목</th>
-      <th>작성자</th>
+      <th>기사번호</th>
+      <th>기사제목</th>
+      <th>작성기자</th>
       <th>작성시간</th>
-      <th>작성내용</th>
+      <th>기사내용</th>
     </tr>
-    <c:forEach items="${boardList}" var="board">
+    <c:forEach items="${articleList}" var="article">
       <tr>
-        <td>${board.id}</td>
-        <td><a href="/board?id=${board.id}">${board.boardTitle}</a></td>
-        <td>${board.boardWriter}</td>
-        <td>${board.boardCreatedDate}</td>
-        <td>${board.boardContents}</td>
+        <td>${article.id}</td>
+        <td><a href="/article?id=${article.id}">${article.articleTitle}</a></td>
+        <%-- 여기서 /article의 경우 findById 메소드 --%>
+        <td>${article.articleWriter}</td>
+        <td>${article.articleUploadingTime}</td>
+        <td>${article.articleContents}</td>
       </tr>
     </c:forEach>
   </table>
