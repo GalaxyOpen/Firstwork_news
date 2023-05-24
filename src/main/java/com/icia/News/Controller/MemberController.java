@@ -79,5 +79,10 @@ public class MemberController {
     public String myPage(){
         return "/member/memberHome";
     }
+    @GetMapping("/member/delete")
+    public String delete(@RequestParam("id")Long id){
+        memberService.delete(id);
+        return "/index";
+    }
 
 }

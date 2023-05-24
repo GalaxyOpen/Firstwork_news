@@ -29,4 +29,8 @@ public class MemberService {
     public void update(MemberDTO memberDTO) {
         memberRepository.update(memberDTO);
     }
+
+    public void delete(Long id) {
+        memberRepository.delete(id);
+    }
 }

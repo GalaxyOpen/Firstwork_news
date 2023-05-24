@@ -20,6 +20,10 @@
         update news_member set memberName=#{memberName}, memberMobile=#{memberMobile} where id=#{id}
     </select>
 
+    <delete id="delete" parameterType="Long">
+        delete from news_member where id=#{id}
+    </delete>
+
 
 
 </mapper>
