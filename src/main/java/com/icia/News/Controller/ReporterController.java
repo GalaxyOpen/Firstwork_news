@@ -79,6 +79,11 @@ public class ReporterController {
     public String myPage(){
         return "/reporter/reporterHome";
     }
+    @GetMapping("/reporter/delete")
+    public String delete(@RequestParam("id")Long id){
+        reporterService.delete(id);
+        return "/index";
+    }
 
 
 }

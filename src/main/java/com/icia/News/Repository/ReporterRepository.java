@@ -31,4 +31,8 @@ public class ReporterRepository {
     public void update(ReporterDTO reporterDTO) {
         sql.update("Reporter.update",reporterDTO);
     }
+
+    public void delete(Long id) {
+        sql.delete("Reporter.delete",id);
+    }
 }

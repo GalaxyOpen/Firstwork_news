@@ -25,6 +25,10 @@
         update news_reporter set reporterName=#{reporterName}, reporterMedia=#{reporterMedia}, reporterMobile=#{reporterMobile} where id=#{id}
     </select>
 
+    <delete id="delete" parameterType="Long">
+        delete from news_reporter where id=#{id}
+    </delete>
+
 </mapper>
 
 
