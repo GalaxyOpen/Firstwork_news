@@ -33,6 +33,19 @@
         select*from news_article where ${type} like concat('%',#{q},'%') order by id desc limit #{start}, #{limit}
     </select>
 
+    <update id="updateHits" parameterType="Long">
+        update news_article set articleHits=articleHits+1 where id=#{id}
+    </update>
+
+    <select id="findById" resultType="article" parameterType="Long">
+        select*from news_article where id=#{id}
+    </select>
+
+    <select id="findFile" parameterType="Long" resultType="articlePicture">
+        select*from news_article_picture where articleId=#{articleId}
+    </select>
+
+
 </mapper>
 
 

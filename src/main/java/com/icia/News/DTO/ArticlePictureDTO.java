@@ -9,9 +9,9 @@ import lombok.ToString;
 @ToString
 
 public class ArticlePictureDTO {
-    private Long Id;
+    private Long id;
     private String originalFileName;
     private String storedFileName;
     private int fileAttached ;
-    private Long ArticleId;
+    private Long articleId;
 }

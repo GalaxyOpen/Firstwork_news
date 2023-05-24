@@ -148,4 +148,16 @@ public class ArticleService {
 
         return pagingDTO;
     }
+
+    public void updateHits(Long id) {
+        articleRepository.updateHits(id);
+    }
+
+    public ArticleDTO findById(Long id) {
+        return articleRepository.findById(id);
+    }
+
+    public List<ArticlePictureDTO> findFile(Long id) {
+        return articleRepository.findFile(id);
+    }
 }

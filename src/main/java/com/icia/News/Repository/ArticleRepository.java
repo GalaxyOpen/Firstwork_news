@@ -41,4 +41,16 @@ public class ArticleRepository {
     public int articleSearchCount(Map<String, Object> pagingParams) {
         return sql.selectOne("Article.searchCount", pagingParams);
     }
+
+    public void updateHits(Long id) {
+        sql.update("Article.updateHits",id);
+    }
+
+    public ArticleDTO findById(Long id) {
+        return sql.selectOne("Article.findById",id);
+    }
+
+    public List<ArticlePictureDTO> findFile(Long articleId) {
+        return sql.selectList("Article.findFile", articleId);
+    }
 }

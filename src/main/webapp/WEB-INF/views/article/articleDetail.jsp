@@ -17,7 +17,7 @@
        </tr>
        <tr>
            <th>작성 기자</th>
-           <td>${article.articleWriter}기자</td>
+           <td>${article.articleWriter}</td>
        </tr>
        <tr>
            <th>작성 날짜</th>
@@ -27,7 +27,7 @@
        </tr>
        <tr>
            <th>조회수</th>
-           <td>#{article.articleHits}</td>
+           <td>${article.articleHits}</td>
        </tr>
        <tr>
            <th>기사 내용</th>
@@ -37,8 +37,9 @@
             <tr>
                 <th>첨부사진</th>
                     <td>
-                        <c:forEach items="${articlePictureList}" var="articlePicture">
-                            <img src="${pageContext.request.contextPath}/upload/${articlePicture.storedFileName}" alt="100" height="100">
+                        <c:forEach items ="${articlePictureList}" var="articlePicture">
+                            <img src="${pageContext.request.contextPath}/upload/${articlePicture.storedFileName}"
+                                 alt="" width="100" height="100">
                         </c:forEach>
                     </td>
             </tr>

@@ -1,8 +1,11 @@
 package com.icia.News.Controller;
 
 import com.icia.News.DTO.ArticleDTO;
+import com.icia.News.DTO.ArticlePictureDTO;
+import com.icia.News.DTO.CommentDTO;
 import com.icia.News.DTO.PagingDTO;
 import com.icia.News.Service.ArticleService;
+import com.icia.News.Service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +21,8 @@ import java.util.List;
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
+    @Autowired
+    private CommentService commentService;
     @GetMapping("/article/save")
     public String saveForm(){
         //신욱님이 써준 줄 추가
@@ -28,7 +33,7 @@ public class ArticleController {
     }
     @PostMapping("/article/save")
     public String save(@ModelAttribute ArticleDTO articleDTO) throws IOException {
-        System.out.println("boardDTO = " + articleDTO);
+        System.out.println("articleDTO = " + articleDTO);
         articleService.save(articleDTO);
         return "redirect:/article?id="+articleDTO.getId();
     }
@@ -38,11 +43,11 @@ public class ArticleController {
         model.addAttribute("articleList", articleDTOList);
         return "/article/articleList";
     }
-    @GetMapping("article/paging")
+    @GetMapping("/article/paging")
     public String paging(Model model,
                          @RequestParam(value="page",required = false,defaultValue = "1")int page,
                          @RequestParam(value="q",required = false,defaultValue = "")String q,
-                         @RequestParam(value="type",required = false, defaultValue = "boardTitle")String type){
+                         @RequestParam(value="type",required = false, defaultValue = "articleTitle")String type){
         System.out.println("page = " + page+",q="+q);
         List<ArticleDTO> articleDTOList = null;
         PagingDTO pagingDTO = null;
@@ -61,6 +66,32 @@ public class ArticleController {
         model.addAttribute("q",q);
         model.addAttribute("type", type);
         return "article/articlePaging";
+    }
+    @GetMapping("/article")
+    public String findById(@RequestParam("id")Long id, Model model,
+                           @RequestParam(value="page",required = false,defaultValue = "1")int page,
+                           @RequestParam(value="q", required = false, defaultValue = "")String q,
+                           @RequestParam(value="type", required = false, defaultValue = "articleTitle")String type){
+        articleService.updateHits(id);
+
+       ArticleDTO articleDTO = articleService.findById(id);
+       model.addAttribute("article", articleDTO);
+       model.addAttribute("page", page);
+       model.addAttribute("q",q);
+       model.addAttribute("type",type);
+
+       if(articleDTO != null && articleDTO.getFileAttached()==1){
+           List<ArticlePictureDTO> articlePictureDTO = articleService.findFile(id);
+           model.addAttribute("articlePictureList", articlePictureDTO);
+           System.out.println("articlePictureDTO = " + articlePictureDTO);
+       }
+       List<CommentDTO> commentDTOList = commentService.findAll(id);
+       if(commentDTOList.size()==0){
+           model.addAttribute("commentList",null);
+       }else{
+           model.addAttribute("commentList",commentDTOList);
+       }
+       return "/article/articleDetail";
     }
 
 
