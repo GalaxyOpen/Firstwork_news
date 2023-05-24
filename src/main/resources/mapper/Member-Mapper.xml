@@ -16,6 +16,10 @@
         select *from news_member where memberEmail=#{memberEmail} and memberPassword=#{memberPassword}
     </select>
 
+    <select id="update" parameterType="member">
+        update news_member set memberName=#{memberName}, memberMobile=#{memberMobile} where id=#{id}
+    </select>
+
 
 
 </mapper>

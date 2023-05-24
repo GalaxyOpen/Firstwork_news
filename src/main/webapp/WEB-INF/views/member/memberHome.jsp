@@ -12,7 +12,7 @@
   ${sessionScope.loginEmail} 님 환영해요!
 
   <button onclick="update('${member.id}')">개인정보 수정하기</button><br>
-        <a href="/member/save">글 작성하기</a><br>
+        <a href="/article/save">글 작성하기</a><br>
         <a href="/article/list">글 목록보기</a><br>
         <a href="/member/logout">로그아웃</a><br>
 

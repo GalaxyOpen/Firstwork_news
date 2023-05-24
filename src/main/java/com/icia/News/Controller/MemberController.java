@@ -62,5 +62,18 @@ public class MemberController {
         session.removeAttribute("loginEmail");
         return "redirect:/";
     }
+    @GetMapping("/member/update")
+    public String updateForm(HttpSession session, Model model){
+        String loginEmail=(String)session.getAttribute("loginEmail");
+        MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
+        model.addAttribute("member",memberDTO);
+        return "/member/memberUpdate";
+    }
+
+    @PostMapping("/member/update")
+    public String update (@ModelAttribute MemberDTO memberDTO){
+        memberService.update(memberDTO);
+        return "/member/memberHome";
+    }
 
 }
