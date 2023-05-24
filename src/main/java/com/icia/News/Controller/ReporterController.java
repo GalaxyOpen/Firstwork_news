@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -61,6 +62,18 @@ public class ReporterController {
         // 특정 파라미터만 삭제
         session.removeAttribute("loginEmail");
         return "redirect:/";
+    }
+    @GetMapping("/reporter/update")
+    public String updateForm(HttpSession session, Model model){
+        String reporterLoginEmail =(String)session.getAttribute("reporterLoginEmail");
+        ReporterDTO reporterDTO = reporterService.findByReporterEmail(reporterLoginEmail);
+        model.addAttribute("reporter",reporterDTO);
+        return "/reporter/reporterUpdate";
+    }
+    @PostMapping("/reporter/update")
+    public String update (@ModelAttribute ReporterDTO reporterDTO){
+        reporterService.update(reporterDTO);
+        return "/reporter/reporterHome";
     }
 
 

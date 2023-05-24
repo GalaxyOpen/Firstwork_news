@@ -27,4 +27,8 @@ public class ReporterRepository {
         return sql.selectOne("Reporter.login", reporterDTO);
 
     }
+
+    public void update(ReporterDTO reporterDTO) {
+        sql.update("Reporter.update",reporterDTO);
+    }
 }

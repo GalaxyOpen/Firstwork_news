@@ -21,6 +21,10 @@
         select *from news_reporter where reporterEmail=#{reporterEmail} and reporterPassword=#{reporterPassword}
     </select>
 
+    <select id="update" parameterType="reporter">
+        update news_reporter set reporterName=#{reporterName}, reporterMedia=#{reporterMedia}, reporterMobile=#{reporterMobile} where id=#{id}
+    </select>
+
 </mapper>
 
 

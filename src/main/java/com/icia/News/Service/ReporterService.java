@@ -60,4 +60,8 @@ public class ReporterService {
             return false;
         }
     }
+
+    public void update(ReporterDTO reporterDTO) {
+        reporterRepository.update(reporterDTO);
+    }
 }
