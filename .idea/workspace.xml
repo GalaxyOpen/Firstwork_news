@@ -9,14 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;articleList.jsp 작성 완료">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;기사 등록 확인. 페이징 처리된 목록 로딩이 현재 필요(데이터 베이스에는 들어가지만, 표현할 jsp를 아직 만들지 않음)">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articlePaging.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterHome.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +198,7 @@
       <workItem from="1684280465230" duration="22129000" />
       <workItem from="1684366108159" duration="12869000" />
       <workItem from="1684814916471" duration="10295000" />
-      <workItem from="1684885451868" duration="16134000" />
+      <workItem from="1684885451868" duration="18340000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -345,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684903908159</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="2023.05.24. 기획안 제출 후&#10;기사 등록 확인. 페이징 처리된 목록 로딩이 현재 필요(데이터 베이스에는 들어가지만, 표현할 jsp를 아직 만들지 않음)">
+      <created>1684906422665</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684906422665</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +374,18 @@
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articleSave.jsp 일부 내용 수정 및 articleDetail 생성&#10;아직 함수 작업 및 Controller는 만들지 않음." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;reporter_nav.jsp + member_nav.jsp를 nav.jsp로 통합" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articleList.jsp 작성 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;articleList.jsp 작성 완료" />
+    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기사 등록 확인. 페이징 처리된 목록 로딩이 현재 필요(데이터 베이스에는 들어가지만, 표현할 jsp를 아직 만들지 않음)" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;기사 등록 확인. 페이징 처리된 목록 로딩이 현재 필요(데이터 베이스에는 들어가지만, 표현할 jsp를 아직 만들지 않음)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articlePaging.jsp</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
