@@ -60,7 +60,7 @@ public class ReporterController {
         // 세션에 담긴 값 전체 삭제
 //        session.invalidate();
         // 특정 파라미터만 삭제
-        session.removeAttribute("loginEmail");
+        session.removeAttribute("reporterLoginEmail");
         return "redirect:/";
     }
     @GetMapping("/reporter/update")

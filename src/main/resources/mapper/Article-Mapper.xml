@@ -45,6 +45,15 @@
         select*from news_article_picture where articleId=#{articleId}
     </select>
 
+    <update id="update" parameterType="article">
+        update news_article set articleTitle=#{articleTitle}, articleContents=#{articleContents},
+                                fileAttached=#{fileAttached} where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        delete from news_article where id=#{id}
+    </delete>
+
 
 </mapper>
 

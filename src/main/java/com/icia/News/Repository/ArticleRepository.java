@@ -53,4 +53,12 @@ public class ArticleRepository {
     public List<ArticlePictureDTO> findFile(Long articleId) {
         return sql.selectList("Article.findFile", articleId);
     }
+
+    public void update(ArticleDTO articleDTO) {
+        sql.update("Article.update",articleDTO);
+    }
+
+    public void delete(Long id) {
+        sql.delete("Article.delete",id);
+    }
 }

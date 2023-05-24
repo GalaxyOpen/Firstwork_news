@@ -160,4 +160,12 @@ public class ArticleService {
     public List<ArticlePictureDTO> findFile(Long id) {
         return articleRepository.findFile(id);
     }
+
+    public void update(ArticleDTO articleDTO) {
+        articleRepository.update(articleDTO);
+    }
+
+    public void delete(Long id) {
+        articleRepository.delete(id);
+    }
 }

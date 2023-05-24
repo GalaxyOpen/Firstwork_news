@@ -46,16 +46,17 @@
        </c:if>
    </table>
     <button onclick="article_list()">기사 목록</button>
-        <c:if test="${sessionScope.reporterLoginEmail}">
+        <c:if test="${sessionScope.reporterLoginEmail != null}">
             <button onclick="article_update()">기사 수정</button>
             <button onclick="article_delete()">기사 삭제</button>
         </c:if>
     <div id="commentArea">
-        <c:if test="${sessionScope.loginEmail}">
+        <c:if test="${sessionScope.loginEmail !=null}">
             <input type="text" id="commentWriter" value="${sessionScope.loginEmail}">
             <input type="text" id="commentContents" placeholder="댓글">
+            <button onclick="comment_write()">댓글 작성</button>
         </c:if>
-        <button onclick="comment_write()">댓글 작성</button>
+
     </div>
     <div id="commentList">
         <c:choose>
@@ -93,6 +94,7 @@
         <a href="/member/myPage">홈으로 돌아가기</a>
     </c:if>
     <c:if test="${sessionScope.reporterLoginEmail}">
+        <a href="/article/update">글 수정하기</a>
         <a href="/reporter/myPage">홈으로 돌아가기</a>
     </c:if>
 </div>

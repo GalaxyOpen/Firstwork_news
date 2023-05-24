@@ -80,7 +80,8 @@ public class ArticleController {
        model.addAttribute("q",q);
        model.addAttribute("type",type);
 
-       if(articleDTO != null && articleDTO.getFileAttached()==1){
+
+       if(articleDTO.getFileAttached()==1){
            List<ArticlePictureDTO> articlePictureDTO = articleService.findFile(id);
            model.addAttribute("articlePictureList", articlePictureDTO);
            System.out.println("articlePictureDTO = " + articlePictureDTO);
@@ -92,6 +93,24 @@ public class ArticleController {
            model.addAttribute("commentList",commentDTOList);
        }
        return "/article/articleDetail";
+    }
+    @GetMapping("/article/update")
+    public String updateForm(@RequestParam("id")Long id, Model model){
+        ArticleDTO articleDTO = articleService.findById(id);
+        model.addAttribute("article", articleDTO);
+        return "/article/articleUpdate";
+    }
+    @PostMapping("/article/update")
+    public String update(@ModelAttribute ArticleDTO articleDTO, Model model){
+        articleService.update(articleDTO);
+        ArticleDTO art = articleService.findById(articleDTO.getId());
+        model.addAttribute("article", art);
+        return "redirect:/article?id="+articleDTO.getId();
+    }
+    @GetMapping("/article/delete")
+    public String delete(@RequestParam("id") Long id){
+        articleService.delete(id);
+        return "/index";
     }
 
 

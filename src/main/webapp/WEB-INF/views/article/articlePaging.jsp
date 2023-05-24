@@ -38,7 +38,7 @@
         <tr>
           <td>${article.id}</td>
           <td>
-            <a href="/article?id=${article.id}${paging.page}&q=${q}&type=${type}">${article.articleTitle}</a>
+            <a href="/article?id=${article.id}&page=${paging.page}&q=${q}&type=${type}">${article.articleTitle}</a>
           </td>
           <td>
             <fmt:formatDate value="${article.articleUploadingTime}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
@@ -96,11 +96,12 @@
       </c:choose>
     </ul>
   </div>
-  <c:if test="${sessionScope.reporterLoginEmail !=null}">
+  <c:if test="${sessionScope.reporterLoginEmail}">
   <a href="/article/save">글 작성하기</a>
-  <a href="/reporter/mypage">MyHome</a>
+  <a href="/reporter/myPage">MyHome</a>
+
   </c:if>
-  <c:if test="${sessionScope.loginEmail != null}">
+  <c:if test="${sessionScope.loginEmail}">
   <a href="/member/myPage">MyHome</a>
   </c:if>
   <c:if test="${sessionScope.reporterLoginEmail == admin && sessionScope.loginEmail == admin}">

@@ -9,21 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료이후&#10;pagingList, pagingParam, searchList, pagingSearchParam 메소드를 controller, service, repository, mapper에 작성 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/Comment-Mapper.xml" afterDir="false" />
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;페이징 처리를 완료했으나 findById에서 문제 발생. 현재 원인 파악 중">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleUpdate.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ArticlePictureDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/ArticlePictureDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articlePaging.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articlePaging.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleSave.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/artileDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberHome.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -210,7 +206,8 @@
       <workItem from="1684280465230" duration="22129000" />
       <workItem from="1684366108159" duration="12869000" />
       <workItem from="1684814916471" duration="10295000" />
-      <workItem from="1684885451868" duration="30213000" />
+      <workItem from="1684885451868" duration="31446000" />
+      <workItem from="1684923361187" duration="3050000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -373,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684913421270</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2023.05.24. 기획안 제출 후&#10;페이징 처리를 완료했으나 findById에서 문제 발생. 현재 원인 파악 중">
+      <created>1684922391064</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684922391064</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,6 +407,7 @@
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기사 등록 확인. 페이징 처리된 목록 로딩이 현재 필요(데이터 베이스에는 들어가지만, 표현할 jsp를 아직 만들지 않음)" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료 &#10;아직 테스트는 해보지 않음. &#10;controller부터 다시 작성해야됨." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료이후&#10;pagingList, pagingParam, searchList, pagingSearchParam 메소드를 controller, service, repository, mapper에 작성 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료이후&#10;pagingList, pagingParam, searchList, pagingSearchParam 메소드를 controller, service, repository, mapper에 작성 완료" />
+    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;페이징 처리를 완료했으나 findById에서 문제 발생. 현재 원인 파악 중" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;페이징 처리를 완료했으나 findById에서 문제 발생. 현재 원인 파악 중" />
   </component>
 </project>
