@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @Controller
@@ -37,6 +38,29 @@ public class ReporterController {
         }else{
             return new ResponseEntity<>(reporterDTO, HttpStatus.CONFLICT);
         }
+    }
+    @GetMapping("/reporter/login")
+    public String loginForm(){
+        return "/reporter/reporterLogin";
+    }
+    @PostMapping("/reporter/login")
+    public String login(@ModelAttribute ReporterDTO reporterDTO, HttpSession session){
+        boolean reporterLoginResult = reporterService.login(reporterDTO);
+        if(reporterLoginResult){
+            session.setAttribute("reporterLoginEmail",reporterDTO.getReporterEmail());
+            return "/reporter/reporterHome";
+        }else{
+            return "/reporter/reporterLogin";
+        }
+    }
+
+    @GetMapping("/reporter/logout")
+    public String logout(HttpSession session) {
+        // 세션에 담긴 값 전체 삭제
+//        session.invalidate();
+        // 특정 파라미터만 삭제
+        session.removeAttribute("loginEmail");
+        return "redirect:/";
     }
 
 

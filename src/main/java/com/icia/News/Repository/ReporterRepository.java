@@ -22,4 +22,9 @@ public class ReporterRepository {
     public ReporterDTO findByReporterEmail(String reporterEmail) {
        return sql.selectOne("Reporter.findByReporterEmail", reporterEmail);
     }
+
+    public ReporterDTO login(ReporterDTO reporterDTO) {
+        return sql.selectOne("Reporter.login", reporterDTO);
+
+    }
 }

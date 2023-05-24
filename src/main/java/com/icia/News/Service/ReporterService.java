@@ -51,4 +51,13 @@ public class ReporterService {
     public ReporterDTO findByReporterEmail(String reporterEmail) {
         return reporterRepository.findByReporterEmail(reporterEmail);
     }
+
+    public boolean login(ReporterDTO reporterDTO) {
+        ReporterDTO dto = reporterRepository.login(reporterDTO);
+        if(dto!=null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

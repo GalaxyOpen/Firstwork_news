@@ -17,6 +17,10 @@
         select *from news_reporter where reporterEmail=#{reporterEmail}
     </select>
 
+    <select id="login" parameterType="reporter" resultType="reporter">
+        select *from news_reporter where reporterEmail=#{reporterEmail} and reporterPassword=#{reporterPassword}
+    </select>
+
 </mapper>
 
 
