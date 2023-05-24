@@ -8,8 +8,7 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-
-<%@include file="../component/reporter_nav.jsp"%>
+<%@include file="../component/nav.jsp"%>
 <div id="section">
    <table>
        <tr>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-<%@include file="../component/reporter_nav.jsp"%>
+<%@include file="../component/nav.jsp"%>
 <div id="section">
   <form action="/article/save" method="post" enctype="multipart/form-data">
           제목 : <input type="text" name="articleTitle" placeholder="제목"><br>

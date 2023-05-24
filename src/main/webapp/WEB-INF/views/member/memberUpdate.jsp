@@ -8,7 +8,7 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-<%@include file="../component/member_nav.jsp"%>
+<%@include file="../component/nav.jsp"%>
 <div id="section">
   <h2>회원 정보 수정</h2>
   <form action="/member/update" method="post" name="updateForm">

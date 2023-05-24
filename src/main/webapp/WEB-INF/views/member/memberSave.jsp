@@ -8,7 +8,7 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-
+<%@include file="../component/nav.jsp"%>
 <div id="section">
     <div style="display: grid; place-items: center">
     <form action="/member/save" method="post">

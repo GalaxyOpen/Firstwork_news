@@ -7,7 +7,7 @@
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
-<%@include file="../component/reporter_nav.jsp"%>
+<%@include file="../component/nav.jsp"%>
 ${sessionScope.loginEmail} 님 환영해요!
 <button onclick="update('${reporter.id}')">개인정보 수정하기</button><br>
 <a href="/aritcle/save">글 작성하기</a><br>
