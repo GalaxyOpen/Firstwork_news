@@ -4,11 +4,13 @@ import com.icia.News.DTO.ArticleDTO;
 import com.icia.News.Service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 public class ArticleController {
@@ -20,7 +22,7 @@ public class ArticleController {
 //        String email = (String) session.getAttribute("loginEmail");
 //        MemberDTO dto = memberService.findByMemberEmail(email);
 //        model.addAttribute("boardWriter",dto.getId());
-        return "/boardPages/boardSave";
+        return "/article/articleSave";
     }
     @PostMapping("/article/save")
     public String save(@ModelAttribute ArticleDTO articleDTO) throws IOException {
@@ -28,4 +30,11 @@ public class ArticleController {
         articleService.save(articleDTO);
         return "redirect:/article?id="+articleDTO.getId();
     }
+    @GetMapping("/article/list")
+    public String findAll(Model model){
+        List<ArticleDTO> articleDTOList = articleService.findAll();
+        model.addAttribute("articleList", articleDTOList);
+        return "/article/articleList";
+    }
+
 }

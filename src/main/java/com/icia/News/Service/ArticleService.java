@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -47,8 +48,13 @@ public class ArticleService {
 
                 //저장 처리
                 articlePicture.transferTo(new File(savePath));
-                articleRepository.saveFile(articleDTO);
+                articleRepository.saveFile(articlePictureDTO);
             }
         }
+    }
+
+    public List<ArticleDTO> findAll() {
+        return articleRepository.findAll();
+
     }
 }

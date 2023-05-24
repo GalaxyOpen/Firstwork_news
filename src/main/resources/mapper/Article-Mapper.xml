@@ -5,8 +5,17 @@
 <mapper namespace="Article">
     <insert id="save" parameterType="article" useGeneratedKeys="true" keyProperty="id">
         insert into news_article (articleTitle, articleWriter, articleContents, fileAttached, reporterId)
-        values(#{articleTitle},#{articleWrtier},#{articleContents},#{fileAttached},#{reporterId})
+        values(#{articleTitle},#{articleWriter},#{articleContents},#{fileAttached},#{reporterId})
     </insert>
+
+    <insert id="saveFile" parameterType="articlePicture">
+        insert into news_article_picture(originalFileName, storedFileName, articleId)
+        values(#{originalFileName}, #{storedFileName},#{articleId})
+    </insert>
+
+    <select id="findAll" resultType="article">
+        select*from news_article
+    </select>
 
 </mapper>
 
