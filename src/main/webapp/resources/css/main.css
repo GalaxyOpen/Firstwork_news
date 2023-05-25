@@ -35,7 +35,7 @@
 
 #section {
     background-color: #e4e4e4;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 #section h2 {
@@ -63,6 +63,17 @@
 #section table tr,th,td {
     padding: 5px;
     border: 1px solid black;
+}
+
+#center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*height: 100vh; !* 화면 전체 높이에 맞게 조정할 경우 */
+}
+#center-image img {
+    margin: auto;
 }
 
 input {

@@ -9,15 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.24. 기획안 제출 후&#10;삭제 버튼 구현 전 nav mypage 뒤의 '&gt;'삭제">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. 기획안 제출 후&#10;update 적용 시 사진도 첨부 가능하게끔 추가. &#10;단, 교체 전 사진도 같이 업로드 되는데 이 부분은 아직 적용하지 못함.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articlePaging.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articlePaging.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleSave.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +201,7 @@
       <workItem from="1684814916471" duration="10295000" />
       <workItem from="1684885451868" duration="31446000" />
       <workItem from="1684923361187" duration="5783000" />
-      <workItem from="1684970252359" duration="5783000" />
+      <workItem from="1684970252359" duration="8915000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -404,14 +399,20 @@
       <option name="project" value="LOCAL" />
       <updated>1684971821815</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="2023.05.25. 기획안 제출 후&#10;update 적용 시 사진도 첨부 가능하게끔 추가. &#10;단, 교체 전 사진도 같이 업로드 되는데 이 부분은 아직 적용하지 못함.">
+      <created>1684976757676</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684976757676</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.18. 기획안 제출 후&#10;좋아요 DTO 추가" />
     <MESSAGE value="2023.05.18. 기획안 제출 후&#10;LikeDTO를 위한 service, repository, Controller 작업과 &#10;membersave, reportsave Form 작업&#10;&#10;articleSave 생성" />
     <MESSAGE value="2023.05.18. 기획안 제출 후&#10;reportSave 수정. articleSave 생성" />
     <MESSAGE value="2023.05.23. 기획안 제출 후&#10;articleSave 완료(테스트 아직 안해봄)&#10;login form 작성 시작" />
@@ -436,6 +437,7 @@
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료&#10;단, 삭제 버튼 구현화 해야함." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;삭제 버튼 구현 전 nav mypage 뒤의 '&gt;'삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.24. 기획안 제출 후&#10;삭제 버튼 구현 전 nav mypage 뒤의 '&gt;'삭제" />
+    <MESSAGE value="2023.05.25. 기획안 제출 후&#10;update 적용 시 사진도 첨부 가능하게끔 추가. &#10;단, 교체 전 사진도 같이 업로드 되는데 이 부분은 아직 적용하지 못함." />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. 기획안 제출 후&#10;update 적용 시 사진도 첨부 가능하게끔 추가. &#10;단, 교체 전 사진도 같이 업로드 되는데 이 부분은 아직 적용하지 못함." />
   </component>
 </project>

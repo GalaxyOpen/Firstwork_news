@@ -6,21 +6,31 @@
     <link rel="stylesheet" href="../resources/css/main.css">
     <link rel="stylesheet" href="../resources/css/bootstrap.css">
 </head>
+<style>
+
+</style>
+
 <body>
 <%@include file="../component/header.jsp"%>
 <%@include file="../component/nav.jsp"%>
 <div id="section">
    <table>
        <tr>
-           <th>번호</th>
-           <td>${article.id}</td>
+           <td><${article.articleWriter}></td>
        </tr>
+       <c:if test="${article.fileAttached == 1}">
+           <tr>
+               <td>
+                   <c:forEach items ="${articlePictureList}" var="articlePicture">
+                       <div id="center-image">
+                       <img src="${pageContext.request.contextPath}/upload/${articlePicture.storedFileName}"
+                            alt="" width="400" height="400">
+                       </div>
+                   </c:forEach>
+               </td>
+           </tr>
+       </c:if>
        <tr>
-           <th>작성 기자</th>
-           <td>${article.articleWriter}</td>
-       </tr>
-       <tr>
-           <th>작성 날짜</th>
            <td>
                <fmt:formatDate value="${article.articleUploadingTime}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
            </td>
@@ -33,17 +43,7 @@
            <th>기사 내용</th>
            <td>${article.articleContents}</td>
        </tr>
-       <c:if test="${article.fileAttached == 1}">
-            <tr>
-                <th>첨부사진</th>
-                    <td>
-                        <c:forEach items ="${articlePictureList}" var="articlePicture">
-                            <img src="${pageContext.request.contextPath}/upload/${articlePicture.storedFileName}"
-                                 alt="" width="100" height="100">
-                        </c:forEach>
-                    </td>
-            </tr>
-       </c:if>
+
    </table>
     <button onclick="article_list()">기사 목록</button>
         <c:if test="${sessionScope.reporterLoginEmail != null}">
