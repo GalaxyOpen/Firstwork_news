@@ -162,6 +162,8 @@ public class ArticleService {
     }
 
     public void update(ArticleDTO articleDTO) throws IOException {
+        List<ArticlePictureDTO> existingPictures = articleRepository.getArticlePictures(articleDTO.getId());
+
         if (articleDTO.getArticlePicture().get(0).isEmpty()) {
             System.out.println("파일없음");
             articleDTO.setFileAttached(0);
@@ -170,6 +172,9 @@ public class ArticleService {
             System.out.println("파일있음");
             articleDTO.setFileAttached(1);
             ArticleDTO art = articleRepository.update(articleDTO);
+
+            deleteExistingPictures(existingPictures);
+
             for (MultipartFile articlePicture : articleDTO.getArticlePicture()) {
                 //원본 사진 이름
                 String originalFileName = articlePicture.getOriginalFilename();
@@ -195,6 +200,16 @@ public class ArticleService {
                 articleRepository.saveFile(articlePictureDTO);
 
             }
+        }
+    }
+    public void deleteExistingPictures(List<ArticlePictureDTO> existingPictures){
+        for(ArticlePictureDTO picture : existingPictures) {
+            // 기존 파일 삭제
+            String filePath = "D:\\Firstwork_news\\"+picture.getStoredFileName();
+            File file = new File(filePath);
+            file.delete();
+
+            articleRepository.deletePicture(picture.getId());
         }
     }
     public void delete(Long id) {

@@ -54,6 +54,13 @@
         delete from news_article where id=#{id}
     </delete>
 
+    <select id="getArticlePictures" resultType="articlePicture">
+        select *from news_article_picture where articleId=#{id}
+    </select>
+
+    <delete id="deletePicture" parameterType="Long">
+        delete from news_article_picture where id=#{id}
+    </delete>
 
 </mapper>
 

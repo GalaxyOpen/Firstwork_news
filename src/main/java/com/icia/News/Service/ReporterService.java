@@ -62,7 +62,7 @@ public class ReporterService {
     }
 
     public void update(ReporterDTO reporterDTO) {
-        reporterRepository.update(reporterDTO);
+            reporterRepository.update(reporterDTO);
     }
 
     public void delete(Long id) {

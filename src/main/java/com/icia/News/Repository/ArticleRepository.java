@@ -62,4 +62,15 @@ public class ArticleRepository {
     public void delete(Long id) {
         sql.delete("Article.delete",id);
     }
+
+    public List<ArticlePictureDTO> getArticlePictures(Long id) {
+        return sql.selectList("Article.getArticlePictures",id);
+    }
+
+    public void deletePicture(Long id) {
+        sql.delete("Article.deletePicture",id);
+
+    }
+
+
 }
