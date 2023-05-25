@@ -40,6 +40,7 @@
           <td>
             <a href="/article?id=${article.id}&page=${paging.page}&q=${q}&type=${type}">${article.articleTitle}</a>
           </td>
+          <td>${article.articleWriter}</td>
           <td>
             <fmt:formatDate value="${article.articleUploadingTime}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
           </td>

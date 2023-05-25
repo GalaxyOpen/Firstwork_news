@@ -61,7 +61,7 @@ public class ArticleService {
     }
 
     public List<ArticleDTO> pagingList(int page) {
-        int pageLimit =5; //한글에 나타날 기사 수
+        int pageLimit =10; //한글에 나타날 기사 수
         int pagingStart=(page-1)*pageLimit;
 
         Map<String, Integer> pagingParams = new HashMap<>();
@@ -161,10 +161,42 @@ public class ArticleService {
         return articleRepository.findFile(id);
     }
 
-    public void update(ArticleDTO articleDTO) {
-        articleRepository.update(articleDTO);
-    }
+    public void update(ArticleDTO articleDTO) throws IOException {
+        if (articleDTO.getArticlePicture().get(0).isEmpty()) {
+            System.out.println("파일없음");
+            articleDTO.setFileAttached(0);
+            articleRepository.update(articleDTO);
+        } else {
+            System.out.println("파일있음");
+            articleDTO.setFileAttached(1);
+            ArticleDTO art = articleRepository.update(articleDTO);
+            for (MultipartFile articlePicture : articleDTO.getArticlePicture()) {
+                //원본 사진 이름
+                String originalFileName = articlePicture.getOriginalFilename();
+                System.out.println(UUID.randomUUID().toString());
 
+                //저장용 이름
+                System.out.println(System.currentTimeMillis());
+                System.out.println(UUID.randomUUID().toString());
+                String storedFileName = System.currentTimeMillis() + "-" + originalFileName;
+                System.out.println("storedFileName = " + storedFileName);
+
+                // 저장을 위한 ArticlePictureDTO
+                ArticlePictureDTO articlePictureDTO = new ArticlePictureDTO();
+                articlePictureDTO.setOriginalFileName(originalFileName);
+                articlePictureDTO.setStoredFileName(storedFileName);
+                articlePictureDTO.setArticleId(art.getId());
+
+                //저장 경로
+                String savePath = "D:\\Firstwork_news\\" + storedFileName;
+
+                //저장 처리
+                articlePicture.transferTo(new File(savePath));
+                articleRepository.saveFile(articlePictureDTO);
+
+            }
+        }
+    }
     public void delete(Long id) {
         articleRepository.delete(id);
     }

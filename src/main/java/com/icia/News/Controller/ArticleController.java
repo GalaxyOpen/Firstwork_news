@@ -101,7 +101,7 @@ public class ArticleController {
         return "/article/articleUpdate";
     }
     @PostMapping("/article/update")
-    public String update(@ModelAttribute ArticleDTO articleDTO, Model model){
+    public String update(@ModelAttribute ArticleDTO articleDTO, Model model) throws IOException{
         articleService.update(articleDTO);
         ArticleDTO art = articleService.findById(articleDTO.getId());
         model.addAttribute("article", art);
@@ -110,7 +110,7 @@ public class ArticleController {
     @GetMapping("/article/delete")
     public String delete(@RequestParam("id") Long id){
         articleService.delete(id);
-        return "/index";
+        return "/article/articleHome";
     }
 
 
