@@ -64,12 +64,16 @@
 <script>
     const loginArea = document.getElementById("login-area");
     const loginEmail= '${sessionScope.reporterLoginEmail}'
+    const loginEmail2= '${sessionScope.loginEmail}'
     console.log(loginEmail.length);
 
     if(loginEmail.length !=0){
-        loginArea.innerHTML = "<a href='/reporter/mypage' style='color: black;'>"+loginEmail +"님 어서오세요!</a>"+
+        loginArea.innerHTML = "<a href='/reporter/myPage' style='color: black;'>"+loginEmail +"님 어서오세요!</a>"+
             "<a href='/reporter/logout'>logout</a>";
-    }else {
+    }else if(loginEmail2.length !=0){
+        loginArea.innerHTML= "<a href='/member/myPage' style='color: black;'>"+loginEmail2+"님 어서오세요!</a>"+
+            "<a href='/member/logout'>logout</a>"
+    }else{
         loginArea.innerHTML = "<a href=/>처음으로</a>";
     }
 </script>

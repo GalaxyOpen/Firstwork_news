@@ -15,11 +15,9 @@
 <h2 style="dsiplay: flex; text-align: center;">Reporter vs Keyboard Warrior</h2>
 
 <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="./resources/images/이의있소.png">
+    <img src="/resources/images/img.png" weight="250" height="250">
+    <img src="./resources/images/이의있소.png" weight="250" height="250">
 </div>
-
-
 <%@include file="./component/footer.jsp"%>
-
 </body>
 </html>
