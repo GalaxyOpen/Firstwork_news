@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class MemberController {
@@ -83,6 +84,12 @@ public class MemberController {
     public String delete(@RequestParam("id")Long id){
         memberService.delete(id);
         return "/index";
+    }
+    @GetMapping("/member/list")
+    public String findAll(Model model){
+        List<MemberDTO> memberDTOList = memberService.findAll();
+        model.addAttribute("memberList", memberDTOList);
+        return "/member/memberList";
     }
 
 }

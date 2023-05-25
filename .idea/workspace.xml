@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. 기획안 제출 후&#10;index.jsp 바탕화면 변경 완료&#10;update 시 사진 수정 로직 고민 중">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. 기사 사진 수정 작업 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +202,7 @@
       <workItem from="1684814916471" duration="10295000" />
       <workItem from="1684885451868" duration="31446000" />
       <workItem from="1684923361187" duration="5783000" />
-      <workItem from="1684970252359" duration="30090000" />
+      <workItem from="1684970252359" duration="30709000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -429,14 +428,20 @@
       <option name="project" value="LOCAL" />
       <updated>1684996792462</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="2023.05.25. 기사 사진 수정 작업 완료">
+      <created>1685010411373</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1685010411373</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.23. 기획안 제출 후&#10;articleSave 완료(테스트 아직 안해봄)&#10;login form 수정&#10;- member/reporter로 각각 나눔.&#10;Nav 수정 : member/reporter로 마찬가지. 각각 나눴음." />
     <MESSAGE value="2023.05.23. 기획안 제출 후&#10;articleSave 완료(테스트 아직 안해봄)&#10;login form 수정 완료 &#10;memberLogin 완성." />
     <MESSAGE value="2023.05.23. 기획안 제출 후&#10;articleSave 완료(테스트 아직 안해봄)&#10;reporter_nav.jsp 생성." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;reporterHome.jsp 제작 &#10;memberHome.jsp 수정" />
@@ -461,6 +466,7 @@
     <MESSAGE value="2023.05.25. 기획안 제출 후&#10;사진 중앙 배치 로직 적용(아직 정확하게 css가 적용되진 않는 것으로 보임)" />
     <MESSAGE value="2023.05.25. 기획안 제출 후&#10;댓글 작성 기능 완료" />
     <MESSAGE value="2023.05.25. 기획안 제출 후&#10;index.jsp 바탕화면 변경 완료&#10;update 시 사진 수정 로직 고민 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. 기획안 제출 후&#10;index.jsp 바탕화면 변경 완료&#10;update 시 사진 수정 로직 고민 중" />
+    <MESSAGE value="2023.05.25. 기사 사진 수정 작업 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. 기사 사진 수정 작업 완료" />
   </component>
 </project>
