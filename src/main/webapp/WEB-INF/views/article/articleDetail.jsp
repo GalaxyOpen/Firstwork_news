@@ -5,6 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="../resources/css/main.css">
     <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
 <style>
 
@@ -52,7 +54,7 @@
         </c:if>
     <div id="commentArea">
         <c:if test="${sessionScope.loginEmail !=null}">
-            <input type="text" id="commentWriter" value="${sessionScope.loginEmail}">
+            <input type="text" id="commentWriter">
             <input type="text" id="commentContents" placeholder="댓글">
             <button onclick="comment_write()">댓글 작성</button>
         </c:if>
@@ -71,7 +73,7 @@
                         <th>작성내용</th>
                         <th>작성시간</th>
                     </tr>
-                    <c:forEach items="${commentList}" var="comment">
+                    <c:forEach items="${commentDTOList}" var="comment">
                         <tr>
                             <td>${comment.id}</td>
                             <td>${comment.commentWriter}</td>
@@ -142,10 +144,10 @@
                     output+="<td>"+comment[i].id+"</td>";
                     output+="<td>"+comment[i].commentWriter+"</td>";
                     output+="<td>"+comment[i].commentContents+"</td>";
-                    output+="<td>"+moment(com[i].commentCreatedDate).format("YYYY-MM-DD HH:mm:ss")+"</td>";
+                    output+="<td>"+moment(comment[i].commentCreatedDate).format("YYYY-MM-DD HH:mm:ss")+"</td>";
                     output+="</tr>"
                 }
-                output+="</table>"
+                output+="</table>";
                 result.innerHTML=output;
                 document.getElementById("commentWriter").value="";
                 document.getElementById("commentContents").value="";

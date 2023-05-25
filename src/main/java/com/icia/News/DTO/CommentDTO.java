@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 @ToString
 public class CommentDTO {
     private Long id;
-    private Long ArticleId;
+    private Long articleId;
     private String commentWriter;
     private String commentContents;
     public Timestamp commentCreatedDate;

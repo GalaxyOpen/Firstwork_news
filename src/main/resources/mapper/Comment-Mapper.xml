@@ -3,6 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Comment">
+    <insert id="save" parameterType="comment">
+        insert into news_comment(commentWriter, commentContents, articleId)
+        values (#{commentWriter}, #{commentContents}, #{articleId})
+    </insert>
+
     <select id="findAll" parameterType="Long" resultType="comment">
         select*from news_comment where articleId=#{articleId} order by id desc
     </select>

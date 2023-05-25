@@ -12,7 +12,14 @@ public class CommentRepository {
     @Autowired
     private SqlSessionTemplate sql;
 
+
     public List<CommentDTO> findAll(Long articleId) {
         return sql.selectList("Comment.findAll", articleId);
+
+    }
+
+    public void save(CommentDTO commentDTO) {
+        System.out.println("commentDTO = " + commentDTO);
+        sql.insert("Comment.save", commentDTO);
     }
 }

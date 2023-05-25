@@ -15,4 +15,8 @@ public class CommentService {
     public List<CommentDTO> findAll(Long articleId) {
         return commentRepository.findAll(articleId);
     }
+
+    public void save(CommentDTO commentDTO) {
+        commentRepository.save(commentDTO);
+    }
 }
