@@ -24,6 +24,10 @@
         delete from news_member where id=#{id}
     </delete>
 
+    <select id="findAll" resultType="member">
+        select*from news_member
+    </select>
+
 
 
 </mapper>
