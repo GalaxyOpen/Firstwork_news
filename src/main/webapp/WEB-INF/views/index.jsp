@@ -18,6 +18,11 @@
     <img src="/resources/images/img.png" weight="250" height="250">
     <img src="./resources/images/이의있소.png" weight="250" height="250">
 </div>
+
+<c:if test="${sessionScope.reporterLoginEmail == 'admin' && sessionScope.loginEmail =='admin'}">
+    <a href="/member/list">회원목록</a>
+    <a href="/reporter/list">기자목록</a>
+</c:if>
 <%@include file="./component/footer.jsp"%>
 </body>
 </html>
