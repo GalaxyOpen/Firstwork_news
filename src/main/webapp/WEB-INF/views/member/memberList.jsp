@@ -45,7 +45,7 @@
 </body>
 <script>
     const member_detail=(id)=>{
-        location.href="/member/list?id="+id;
+        location.href="/member/detail?id="+id;
         <%-- findById 메소드를 따라가야 함.  --%>
     }
     const member_delete=(id)=>{
