@@ -22,6 +22,7 @@
 <c:if test="${sessionScope.reporterLoginEmail == 'admin' && sessionScope.loginEmail =='admin'}">
     <a href="/member/list">회원목록</a>
     <a href="/reporter/list">기자목록</a>
+    <a href="/artile/list">전체 기사 목록</a>
 </c:if>
 <%@include file="./component/footer.jsp"%>
 </body>
