@@ -10,7 +10,7 @@
 
         <c:if test="${sessionScope.reporterLoginEmail == null && sessionScope.loginEmail == null}">
         <li>
-            <a href="/article/list">기사목록</a>
+            <a href="/article/paging">기사목록</a>
         </li>
         <li>
             <a href="/member/save">댓글회원 가입</a>
