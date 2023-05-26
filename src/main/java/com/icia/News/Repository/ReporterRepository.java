@@ -30,8 +30,9 @@ public class ReporterRepository {
 
     }
 
-    public void update(ReporterDTO reporterDTO) {
+    public ReporterDTO update(ReporterDTO reporterDTO) {
         sql.update("Reporter.update",reporterDTO);
+        return reporterDTO;
     }
 
     public void delete(Long id) {
@@ -48,5 +49,13 @@ public class ReporterRepository {
 
     public List<ReporterPictureDTO> findFile(Long id) {
         return sql.selectList("Reporter.findFile",id);
+    }
+
+    public List<ReporterPictureDTO> getReporterPictures(Long id) {
+        return sql.selectList("Reporter.getReporterPictures",id);
+    }
+
+    public void deleteExistingPicture(Long id) {
+        sql.delete("Reporter.deleteExistingPicture",id);
     }
 }

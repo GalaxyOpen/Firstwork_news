@@ -62,8 +62,54 @@ public class ReporterService {
         }
     }
 
-    public void update(ReporterDTO reporterDTO) {
+    public void update(ReporterDTO reporterDTO) throws IOException {
+        List<ReporterPictureDTO> existingPictures = reporterRepository.getReporterPictures(reporterDTO.getId());
+        //새롭게 받은 파일로 교체하는 로직
+        if(reporterDTO.getReporterPicture().get(0).isEmpty()) {
+            System.out.println("대표사진 없음");
+            reporterDTO.setFileAttached(0);
             reporterRepository.update(reporterDTO);
+        }else{
+            System.out.println("대표사진 교체");
+            reporterDTO.setFileAttached(1);
+            ReporterDTO report = reporterRepository.update(reporterDTO);
+
+            deleteExistingPictures(existingPictures);
+
+            for(MultipartFile reportPicture : reporterDTO.getReporterPicture()){
+                //원본 사진 이름
+                String originalFileName = reportPicture.getOriginalFilename();
+                System.out.println(UUID.randomUUID().toString());
+
+                //저장용 이름
+                System.out.println(System.currentTimeMillis());
+                System.out.println(UUID.randomUUID().toString());
+                String storedFileName=System.currentTimeMillis()+"-"+originalFileName;
+                System.out.println("storedFileName = " + storedFileName);
+
+                //저장을 위한 ReportPictureDTO
+                ReporterPictureDTO reporterPictureDTO = new ReporterPictureDTO();
+                reporterPictureDTO.setOriginalFileName(originalFileName);
+                reporterPictureDTO.setStoredFileName(storedFileName);
+                reporterPictureDTO.setReporterId(report.getId());
+
+                //저장 경로
+                String savePath = "D:\\Firstwork_news\\"+storedFileName;
+
+                //저장 처리
+                reportPicture.transferTo(new File(savePath));
+                reporterRepository.saveFile(reporterPictureDTO);
+            }
+        }
+    }
+    public void deleteExistingPictures(List<ReporterPictureDTO> existingPictures){
+        for(ReporterPictureDTO picture : existingPictures){
+            // 기존 파일 삭제
+            String filePath = "D:\\Firstwork_news\\"+picture.getStoredFileName();
+            File file = new File(filePath);
+            file.delete();
+            reporterRepository.deleteExistingPicture(picture.getId());
+        }
     }
 
     public void delete(Long id) {

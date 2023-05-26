@@ -73,8 +73,10 @@ public class ReporterController {
         return "/reporter/reporterUpdate";
     }
     @PostMapping("/reporter/update")
-    public String update (@ModelAttribute ReporterDTO reporterDTO){
+    public String update (@ModelAttribute ReporterDTO reporterDTO, Model model) throws IOException{
         reporterService.update(reporterDTO);
+        ReporterDTO report = reporterService.findById(reporterDTO.getId());
+        model.addAttribute("report",report);
         return "/reporter/reporterHome";
     }
     @GetMapping("/reporter/myPage")

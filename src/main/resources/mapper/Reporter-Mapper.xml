@@ -21,9 +21,10 @@
         select *from news_reporter where reporterEmail=#{reporterEmail} and reporterPassword=#{reporterPassword}
     </select>
 
-    <select id="update" parameterType="reporter">
-        update news_reporter set reporterName=#{reporterName}, reporterMedia=#{reporterMedia}, reporterMobile=#{reporterMobile} where id=#{id}
-    </select>
+    <update id="update" parameterType="reporter" useGeneratedKeys="true" keyProperty="id">
+        update news_reporter set reporterName=#{reporterName}, reporterMedia=#{reporterMedia}, reporterMobile=#{reporterMobile},
+                            fileAttached=#{fileAttached} where id=#{id}
+    </update>
 
     <delete id="delete" parameterType="Long">
         delete from news_reporter where id=#{id}
@@ -40,6 +41,14 @@
     <select id="findFile" parameterType="Long" resultType="reporterPicture">
         select*from news_reporter_picture where reporterId=#{reporterId}
     </select>
+
+    <select id="getReporterPictures" resultType="reporterPicture">
+        select *from news_reporter_picture where reporterId=#{id}
+    </select>
+
+    <delete id="deleteExistingPicture" parameterType="Long">
+        delete from news_reporter_picture where id=#{id}
+    </delete>
 
 
 </mapper>
