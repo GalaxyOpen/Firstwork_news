@@ -4,6 +4,7 @@
 <head>
     <title>Title</title>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <link rel="stylesheet" href="../resources/css/main.css">
 </head>
 <body>
 <%@include file="../component/header.jsp"%>
