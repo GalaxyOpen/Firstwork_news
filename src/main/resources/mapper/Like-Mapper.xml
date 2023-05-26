@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Like">
+        <insert id="addLike" parameterType="Long">
+            insert into article_Like (articleId, memberId)
+            values (#{articleId},#{memberId})
+        </insert>
+
+    <select id="findById" parameterType="Long" resultType="Like">
+        select*from article_Like where memberId=#{memberId}
+    </select>
+</mapper>

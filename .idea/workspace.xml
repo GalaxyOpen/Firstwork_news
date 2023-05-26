@@ -9,13 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;관리자 모드에서 기자/일반 회원 목록 열람 기능 구현 &#10;&#10;이제 기자 회원 사진 수정과 좋아요 로직 차례">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/full_heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/heart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ReporterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ReporterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Reporter-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Reporter-Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/LikeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/LikeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,31 +72,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/spring/Firstwork_news&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;5691d001f08f96122bab0be75cf1eb55&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/spring/Firstwork_news/src/main/webapp/resources/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "5691d001f08f96122bab0be75cf1eb55",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\spring\Firstwork_news\src\main\webapp\resources\images" />
       <recent name="D:\spring\Firstwork_news\src\main\webapp\resources\js" />
       <recent name="D:\spring\Firstwork_news\src\main\webapp\WEB-INF\views\component" />
       <recent name="D:\spring\Firstwork_news\src\main\webapp\resources\css" />
       <recent name="D:\spring\Firstwork_news\src\main\resources\mapper" />
-      <recent name="D:\spring\Firstwork_news\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\spring\Firstwork_news\src\main\webapp\WEB-INF\views" />
@@ -205,7 +208,7 @@
       <workItem from="1684885451868" duration="31446000" />
       <workItem from="1684923361187" duration="5783000" />
       <workItem from="1684970252359" duration="31685000" />
-      <workItem from="1685056796096" duration="14574000" />
+      <workItem from="1685056796096" duration="18079000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -508,16 +511,27 @@
       <option name="project" value="LOCAL" />
       <updated>1685067383564</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="2023.05.25. &#10;기자 회원 사진의 수정 처리 완료 &#10;이제 좋아요 처리">
+      <created>1685078446269</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1685078446269</updated>
+    </task>
+    <task id="LOCAL-00045" summary="2023.05.25. &#10;일반 회원 css 누락된 내용 수정&#10;이제 좋아요 처리">
+      <created>1685078578775</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1685078578775</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articleList.jsp 작성 완료" />
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기사 등록 확인. 페이징 처리된 목록 로딩이 현재 필요(데이터 베이스에는 들어가지만, 표현할 jsp를 아직 만들지 않음)" />
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료 &#10;아직 테스트는 해보지 않음. &#10;controller부터 다시 작성해야됨." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료이후&#10;pagingList, pagingParam, searchList, pagingSearchParam 메소드를 controller, service, repository, mapper에 작성 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;페이징 처리를 완료했으나 findById에서 문제 발생. 현재 원인 파악 중" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;article delete 로직까지 완료&#10;그 이외 권한 관련 작업" />
@@ -540,6 +554,9 @@
     <MESSAGE value="2023.05.25. &#10;memberDetail.jsp와 &#10;memberList.jsp 오타 수정" />
     <MESSAGE value="2023.05.25. &#10;findbyId, findFIle, findAll 메소드 관련&#10;컨트롤러, 서비스, 레파지토리, 매퍼에 작성 완료 &#10;&#10;reporterList.jsp, reporterDetail.jsp 생성 완료" />
     <MESSAGE value="2023.05.25. &#10;관리자 모드에서 기자/일반 회원 목록 열람 기능 구현 &#10;&#10;이제 기자 회원 사진 수정과 좋아요 로직 차례" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;관리자 모드에서 기자/일반 회원 목록 열람 기능 구현 &#10;&#10;이제 기자 회원 사진 수정과 좋아요 로직 차례" />
+    <MESSAGE value="2023.05.25. &#10;기자 회원 사진의 수정 처리 완료 &#10;이제 좋아요 처리" />
+    <MESSAGE value="2023.05.25. &#10;일반 회원 css 누락된 내용 수정&#10;이제 좋아요 처리" />
+    <MESSAGE value="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정." />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정." />
   </component>
 </project>

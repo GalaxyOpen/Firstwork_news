@@ -9,9 +9,10 @@ import lombok.ToString;
 @ToString
 
 public class LikeDTO {
-    private int likeId;
-    private int articleId;
-    private int memberId;
-    private int article_like;
+    private Long likeId;
+    private Long articleId;
+    private Long memberId;
+    private Long article_like;
 
 }
+

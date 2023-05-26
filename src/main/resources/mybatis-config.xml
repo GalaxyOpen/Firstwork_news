@@ -9,6 +9,8 @@
         <typeAlias type="com.icia.News.DTO.CommentDTO" alias="comment"/>
         <typeAlias type="com.icia.News.DTO.ReporterDTO" alias="reporter"/>
         <typeAlias type="com.icia.News.DTO.ReporterPictureDTO" alias="reporterPicture"/>
+        <typeAlias type="com.icia.News.DTO.LikeDTO" alias="like"/>
+
 
     </typeAliases>
 </configuration>
