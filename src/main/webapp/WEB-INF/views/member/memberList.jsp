@@ -29,7 +29,7 @@
                 <td>${member.memberLevel}</td>
                 <td>${member.memberName}</td>
                 <td>${member.memberEmail}</td>
-                <td>${member.memberMoblie}</td>
+                <td>${member.memberMobile}</td>
                 <td>${member.memberPassword}</td>
 
                 <td><button onclick="member_detail('${member.id}')">조회</button></td>

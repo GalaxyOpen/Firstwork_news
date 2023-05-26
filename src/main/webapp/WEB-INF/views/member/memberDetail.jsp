@@ -28,7 +28,7 @@
     </tr>
     <tr>
       <th>휴대전화 번호</th>
-      <td>${member.memberMoblie}</td>
+      <td>${member.memberMobile}</td>
     </tr>
     <tr>
       <th>비밀번호</th>
