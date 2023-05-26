@@ -63,7 +63,6 @@
             success: function(res){
                 let result = "<table>"
                 result += "<tr>"
-                result += "<td>"+res.memberId+"</td>"
                 result += "<td>"+res.memberLevel+"</td>"
                 result += "<td>"+res.memberName+"</td>"
                 result += "<td>"+res.memberEmail+"</td>"

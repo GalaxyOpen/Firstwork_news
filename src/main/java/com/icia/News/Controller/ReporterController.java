@@ -99,8 +99,8 @@ public class ReporterController {
         model.addAttribute("reporter", reporterDTO);
 
         if(reporterDTO.getFileAttached()==1){
-            List<ReporterPictureDTO> reporterPictureDTOList = reporterService.findFile(reporterDTO.getId());
-            model.addAttribute("reporterPictureList", reporterPictureDTOList);
+            List<ReporterPictureDTO> reporterPictureDTO = reporterService.findFile(reporterDTO.getId());
+            model.addAttribute("reporterPictureList", reporterPictureDTO);
         }
         return "/reporter/reporterDetail";
     }
