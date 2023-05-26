@@ -40,4 +40,9 @@ public class MemberService {
         List<MemberDTO> memberDTOList =memberRepository.findAll();
         return memberDTOList;
     }
+
+    public MemberDTO findById(Long id) {
+        MemberDTO memberDTO = memberRepository.findById(id);
+        return memberDTO;
+    }
 }

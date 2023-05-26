@@ -28,6 +28,10 @@
         select*from news_member
     </select>
 
+    <select id="findById" resultType="member" parameterType="Long">
+        select*from news_member where id=#{id}
+    </select>
+
 
 
 </mapper>
