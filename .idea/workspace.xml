@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/full_heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/heart.png" afterDir="false" />
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/LikeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/DTO/LikeDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +205,7 @@
       <workItem from="1684885451868" duration="31446000" />
       <workItem from="1684923361187" duration="5783000" />
       <workItem from="1684970252359" duration="31685000" />
-      <workItem from="1685056796096" duration="18079000" />
+      <workItem from="1685056796096" duration="24929000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -525,15 +522,34 @@
       <option name="project" value="LOCAL" />
       <updated>1685078578775</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정.">
+      <created>1685081608702</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1685081608702</updated>
+    </task>
+    <task id="LOCAL-00047" summary="2023.05.25. &#10;좋아요 기획한대로 동작. 그리고 index 일부 수정">
+      <created>1685081916084</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1685081916084</updated>
+    </task>
+    <task id="LOCAL-00048" summary="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)">
+      <created>1685082006658</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1685082006658</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articlePaging.jsp 작성 완료이후&#10;pagingList, pagingParam, searchList, pagingSearchParam 메소드를 controller, service, repository, mapper에 작성 완료" />
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;페이징 처리를 완료했으나 findById에서 문제 발생. 현재 원인 파악 중" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;article delete 로직까지 완료&#10;그 이외 권한 관련 작업" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;댓글 회원 삭제 로직 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료" />
@@ -557,6 +573,8 @@
     <MESSAGE value="2023.05.25. &#10;기자 회원 사진의 수정 처리 완료 &#10;이제 좋아요 처리" />
     <MESSAGE value="2023.05.25. &#10;일반 회원 css 누락된 내용 수정&#10;이제 좋아요 처리" />
     <MESSAGE value="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정." />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정." />
+    <MESSAGE value="2023.05.25. &#10;좋아요 기획한대로 동작. 그리고 index 일부 수정" />
+    <MESSAGE value="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)" />
   </component>
 </project>

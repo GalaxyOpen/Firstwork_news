@@ -8,10 +8,6 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
-<style>
-
-</style>
-
 <body>
 <%@include file="../component/header.jsp"%>
 <%@include file="../component/nav.jsp"%>
@@ -88,9 +84,9 @@
         </c:choose>
     </div>
     <div id="heartArea">
-        <div id="myHeart">
-            <button onclick="goodUp()" <c:if test="${sessionScope.loginEmail==null}">disabled</c:if>><img id="img" src="/resources/images/full_heart.png" alt=""/></button>
-        </div>
+
+            <button id="likeButton" onclick="toggleLike()"<c:if test="${sessionScope.loginEmail==null}">disabled</c:if>>좋아요</button>
+
     </div>
     <c:if test="${sessionScope.loginEmail}">
         <a href="/member/myPage">홈으로 돌아가기</a>
@@ -157,25 +153,53 @@
             }
         })
     }
-    const goodUp=()=>{
-        document.getElementById("img").src="/resources/images/heart.png";
-        $.ajax({
-            type: "post",
-            url: "/goodUp",
-            data: {
-                "articleId" : '${article.id}',
-                "memberId" : '${sessionScope.loginEmail}'
-            },
-<%-- 참고로 위에 이미지 파일도 같이 고쳐야 함 --%>
-            success:function(){
-                console.log("좋아요 성공");
-            },
-            error:function(){
-                console.log("좋아요 실패");
+    const toggleLike=()=>{
+        const articleId = `${article.id}`;
+        const memberId = `${sessionScope.loginEmail}`;
+        let url = "/goodUp";
+        const button = document.getElementById("likeButton");
 
+        if(button.innerHTML === "좋아요"){
+            url="/goodUp";
+            button.innerHTML = "좋아요 취소";
+        }else{
+            url="/goodRemove";
+            button.innerHTML = "좋아요";
+        }
+        $.ajax({
+            type: "POST",
+            url: url,
+            data:{
+                articleId: '${article.id}',
+                memberId: '${sessionScope.loginEmail}'
+            },
+            success: function (response){
+                console.log(response)
+            },
+            error:function(xhr, status, error){
+                console.log(error);
             }
         })
     }
+
+    <%--    document.getElementById("img").src="/resources/images/heart.png";--%>
+    <%--    $.ajax({--%>
+    <%--        type: "post",--%>
+    <%--        url: "/goodUp",--%>
+    <%--        data: {--%>
+    <%--            "articleId" : '${article.id}',--%>
+    <%--            "memberId" : '${sessionScope.loginEmail}'--%>
+    <%--        },--%>
+
+    <%--        success:function(){--%>
+    <%--            console.log("좋아요 성공");--%>
+    <%--        },--%>
+    <%--        error:function(){--%>
+    <%--            console.log("좋아요 실패");--%>
+
+    <%--        }--%>
+    <%--    })--%>
+    <%--}--%>
 
 </script>
 </html>

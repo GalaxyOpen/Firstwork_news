@@ -11,4 +11,8 @@
     <select id="findById" parameterType="Long" resultType="Like">
         select*from article_Like where memberId=#{memberId}
     </select>
+
+    <delete id="removeLike" parameterType="Long">
+        delete from article_Like where memberId=#{memberId} and articleId=#{articleId}
+    </delete>
 </mapper>

@@ -22,4 +22,12 @@ public class LikeRepository {
     public LikeDTO findById(String memberId) {
         return sql.selectOne("Like.findById",memberId);
     }
+
+    public boolean removeLike(Long articleId, Long memberId) {
+        LikeDTO likeDTO = new LikeDTO();
+        likeDTO.setArticleId(articleId);
+        likeDTO.setMemberId(memberId);
+        sql.delete("Like.removeLike",likeDTO);
+        return true;
+    }
 }

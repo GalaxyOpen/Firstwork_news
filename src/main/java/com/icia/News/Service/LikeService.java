@@ -16,4 +16,8 @@ public class LikeService {
     public LikeDTO findById(String memberId){
         return likeRepository.findById(memberId);
     }
+
+    public boolean removeLike(Long articleId, Long memberId) {
+        return likeRepository.removeLike(articleId,memberId);
+    }
 }

@@ -32,4 +32,17 @@ public class LikeController {
             return ResponseEntity.badRequest().body("이미 좋아요가 추가되었습니다.");
         }
     }
+    @PostMapping("/goodRemove")
+    public ResponseEntity<String> removeLike(@RequestParam("articleId") Long articleId,
+                                             HttpSession session) {
+        System.out.println("넘어오지않음");
+        String memberId = (String)session.getAttribute("loginEmail");
+        MemberDTO memberDTO = memberService.findByMemberEmail(memberId);
+        boolean result = likeService.removeLike(articleId, memberDTO.getId());
+        if(result){
+            return ResponseEntity.ok("좋아요 삭제");
+        }else{
+            return ResponseEntity.badRequest().body("이미 좋아요가 없습니다.");
+        }
+}
 }
