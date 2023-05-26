@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -67,5 +68,19 @@ public class ReporterService {
 
     public void delete(Long id) {
         reporterRepository.delete(id);
+    }
+
+    public List<ReporterDTO> findAll() {
+        List<ReporterDTO> reporterDTOList = reporterRepository.findAll();
+        return reporterDTOList;
+    }
+
+    public ReporterDTO findById(Long id) {
+        ReporterDTO reporterDTO = reporterRepository.findById(id);
+        return reporterDTO;
+    }
+
+    public List<ReporterPictureDTO> findFile(Long id) {
+        return reporterRepository.findFile(id);
     }
 }

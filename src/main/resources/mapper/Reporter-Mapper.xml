@@ -29,6 +29,19 @@
         delete from news_reporter where id=#{id}
     </delete>
 
+    <select id="findAll" resultType="reporter">
+        select*from news_reporter
+    </select>
+
+    <select id="findById" parameterType="id" resultType="reporter">
+        select *from news_reporter
+    </select>
+
+    <select id="findFile" parameterType="Long" resultType="reporterPicture">
+        select*from news_reporter_picture where reporterId=#{reporterId}
+    </select>
+
+
 </mapper>
 
 

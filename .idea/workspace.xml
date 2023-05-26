@@ -9,7 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;const member_detail=(id) 메소드 &#10;표적을 &quot;/member?id=&quot;+id로 바꿈" />
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;memberDetail.jsp와 &#10;memberList.jsp 오타 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reporter/reporterList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ReporterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ReporterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ReporterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ReporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Reporter-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Reporter-Mapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +206,7 @@
       <workItem from="1684885451868" duration="31446000" />
       <workItem from="1684923361187" duration="5783000" />
       <workItem from="1684970252359" duration="31685000" />
-      <workItem from="1685056796096" duration="4402000" />
+      <workItem from="1685056796096" duration="5847000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -473,15 +481,27 @@
       <option name="project" value="LOCAL" />
       <updated>1685061617397</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="2023.05.25. &#10;관리자 모드를 위하여 &#10;index에 &#10;/member/list 버튼과 &#10;/reporter/list 버튼 생성">
+      <created>1685062018103</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1685062018103</updated>
+    </task>
+    <task id="LOCAL-00041" summary="2023.05.25. &#10;memberDetail.jsp와 &#10;memberList.jsp 오타 수정">
+      <created>1685062146485</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1685062146485</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 수정 작업 완료" />
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;nav와 기자, 댓글 회원 mypage 작업 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articleSave.jsp 일부 내용 수정 및 articleDetail 생성&#10;아직 함수 작업 및 Controller는 만들지 않음." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;reporter_nav.jsp + member_nav.jsp를 nav.jsp로 통합" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;articleList.jsp 작성 완료" />
@@ -505,6 +525,8 @@
     <MESSAGE value="2023.05.25. &#10;findById 메소드 제작 완료&#10;memberList.jsp 에서 &#10;const member_detail=(id) 메소드 &#10;표적을 member/detail로 바꿈" />
     <MESSAGE value="2023.05.25. &#10;findById 메소드 제작 완료&#10;memberList.jsp 에서 &#10;const member_detail=(id) 메소드 &#10;표적을 member/detail로 바꿈&#10;이제 memberDetail.jsp 만들어야함." />
     <MESSAGE value="2023.05.25. &#10;const member_detail=(id) 메소드 &#10;표적을 &quot;/member?id=&quot;+id로 바꿈" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;const member_detail=(id) 메소드 &#10;표적을 &quot;/member?id=&quot;+id로 바꿈" />
+    <MESSAGE value="2023.05.25. &#10;관리자 모드를 위하여 &#10;index에 &#10;/member/list 버튼과 &#10;/reporter/list 버튼 생성" />
+    <MESSAGE value="2023.05.25. &#10;memberDetail.jsp와 &#10;memberList.jsp 오타 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;memberDetail.jsp와 &#10;memberList.jsp 오타 수정" />
   </component>
 </project>

@@ -6,6 +6,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class ReporterRepository {
     @Autowired
@@ -34,5 +36,17 @@ public class ReporterRepository {
 
     public void delete(Long id) {
         sql.delete("Reporter.delete",id);
+    }
+
+    public List<ReporterDTO> findAll() {
+        return sql.selectList("Reporter.findAll");
+    }
+
+    public ReporterDTO findById(Long id) {
+        return sql.selectOne("Reporter.findById", id);
+    }
+
+    public List<ReporterPictureDTO> findFile(Long id) {
+        return sql.selectList("Reporter.findFile",id);
     }
 }

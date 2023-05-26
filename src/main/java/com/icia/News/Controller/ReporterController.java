@@ -1,6 +1,7 @@
 package com.icia.News.Controller;
 
 import com.icia.News.DTO.ReporterDTO;
+import com.icia.News.DTO.ReporterPictureDTO;
 import com.icia.News.Service.ReporterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 public class ReporterController {
@@ -84,6 +86,23 @@ public class ReporterController {
         reporterService.delete(id);
         return "/index";
     }
+    @GetMapping("/reporter/list")
+    public String findAll(Model model){
+        List<ReporterDTO> reporterDTOList = reporterService.findAll();
+        model.addAttribute("reporterList", reporterDTOList);
+        return "/reporter/reporterList";
+    }
 
+    @GetMapping("/reporter")
+    public String findById(@RequestParam("id")Long id, Model model){
+        ReporterDTO reporterDTO = reporterService.findById(id);
+        model.addAttribute("reporter", reporterDTO);
+
+        if(reporterDTO.getFileAttached()==1){
+            List<ReporterPictureDTO> reporterPictureDTOList = reporterService.findFile(reporterDTO.getId());
+            model.addAttribute("reporterPictureList", reporterPictureDTOList);
+        }
+        return "/reporter/reporterDetail";
+    }
 
 }
