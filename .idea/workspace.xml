@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +69,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/spring/Firstwork_news/src/main/webapp/resources/images",
+    "last_opened_file_path": "D:/spring/Firstwork_news",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -205,7 +200,9 @@
       <workItem from="1684885451868" duration="31446000" />
       <workItem from="1684923361187" duration="5783000" />
       <workItem from="1684970252359" duration="31685000" />
-      <workItem from="1685056796096" duration="24929000" />
+      <workItem from="1685056796096" duration="25813000" />
+      <workItem from="1685426679933" duration="800000" />
+      <workItem from="1685491878982" duration="1362000" />
     </task>
     <task id="LOCAL-00001" summary="2023.05.16. 프로젝트 제출 전">
       <created>1684219145823</created>
@@ -543,14 +540,20 @@
       <option name="project" value="LOCAL" />
       <updated>1685082006658</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨.">
+      <created>1685089186116</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1685089186116</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;article delete 로직까지 완료&#10;그 이외 권한 관련 작업" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;댓글 회원 삭제 로직 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료&#10;단, 삭제 버튼 구현화 해야함." />
@@ -575,6 +578,7 @@
     <MESSAGE value="2023.05.25. &#10;Like 로직 관련 &#10;LikeDTO, LikeService, LikeRepository, LikeService, LikeController,mybatis-config, Like-Mapper 각각 생성 및 수정." />
     <MESSAGE value="2023.05.25. &#10;좋아요 기획한대로 동작. 그리고 index 일부 수정" />
     <MESSAGE value="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)" />
+    <MESSAGE value="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨." />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨." />
   </component>
 </project>

@@ -14,7 +14,7 @@
 <%@include file="../component/header.jsp"%>
 <%@include file="../component/nav.jsp"%>
 <div id="section">
-  <form action="/article/list"></form>
+  <form action="/article/list">
   <h2>기사 리스트</h2>
   <table>
     <tr>
@@ -35,7 +35,7 @@
       </tr>
     </c:forEach>
   </table>
-
+  </form>
 </div>
 <%@include file="../component/footer.jsp"%>
 </body>
