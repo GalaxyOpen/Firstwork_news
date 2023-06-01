@@ -15,4 +15,9 @@
     <delete id="removeLike" parameterType="Long">
         delete from article_Like where memberId=#{memberId} and articleId=#{articleId}
     </delete>
+
+    <select id="findByArticleIdAndMemberId" parameterType="map" resultType="Like">
+        select * from article_Like
+        where articleId = #{articleId} and memberId = #{memberId}
+    </select>
 </mapper>

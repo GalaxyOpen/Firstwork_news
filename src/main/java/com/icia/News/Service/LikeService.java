@@ -20,4 +20,9 @@ public class LikeService {
     public boolean removeLike(Long articleId, Long memberId) {
         return likeRepository.removeLike(articleId,memberId);
     }
+
+    public boolean checkIfLiked(Long articleId, Long memberId) {
+        LikeDTO likeDTO = likeRepository.findByArticleIdAndMemberId(articleId, memberId);
+        return likeDTO != null;
+    }
 }

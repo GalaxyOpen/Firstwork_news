@@ -5,6 +5,9 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Repository
 public class LikeRepository {
     @Autowired
@@ -29,5 +32,12 @@ public class LikeRepository {
         likeDTO.setMemberId(memberId);
         sql.delete("Like.removeLike",likeDTO);
         return true;
+    }
+
+    public LikeDTO findByArticleIdAndMemberId(Long articleId, Long memberId) {
+        Map<String, Long> likeOrNot = new HashMap<>();
+        likeOrNot.put("articleId", articleId);
+        likeOrNot.put("memberId", memberId);
+        return sql.selectOne("Like.findByArticleIdAndMemberId", likeOrNot);
     }
 }

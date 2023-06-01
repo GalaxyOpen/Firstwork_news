@@ -182,24 +182,35 @@
         })
     }
 
-    <%--    document.getElementById("img").src="/resources/images/heart.png";--%>
-    <%--    $.ajax({--%>
-    <%--        type: "post",--%>
-    <%--        url: "/goodUp",--%>
-    <%--        data: {--%>
-    <%--            "articleId" : '${article.id}',--%>
-    <%--            "memberId" : '${sessionScope.loginEmail}'--%>
-    <%--        },--%>
+    const checkLikeStatus = () => {
+        const articleId = `${article.id}`;
+        const memberId = `${sessionScope.loginEmail}`;
+        const url = "/checkLikeStatus"; // 좋아요 상태 확인을 위한 API URL
 
-    <%--        success:function(){--%>
-    <%--            console.log("좋아요 성공");--%>
-    <%--        },--%>
-    <%--        error:function(){--%>
-    <%--            console.log("좋아요 실패");--%>
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: {
+                articleId: articleId,
+                memberId: memberId
+            },
+            success: function (response) {
+                if (response === true) {
+                    // 이미 좋아요한 경우
+                    const button = document.getElementById("likeButton");
+                    button.innerHTML = "좋아요 취소";
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+            }
+        });
+    };
 
-    <%--        }--%>
-    <%--    })--%>
-    <%--}--%>
+    // 페이지 로드 시 좋아요 상태 확인 및 버튼 상태 설정
+    $(document).ready(function () {
+        checkLikeStatus();
+    });
 
 </script>
 </html>
