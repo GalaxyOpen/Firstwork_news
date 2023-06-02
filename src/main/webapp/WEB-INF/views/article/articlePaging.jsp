@@ -18,7 +18,7 @@
     <form action="/article/paging">
      <select name="type">
        <option value="articleTitle">기사 제목</option>
-       <option value="${articleDTO.articleWrtier}">작성 기자</option>
+       <option value="${articleDTO.articleWrtier}">기사 내용</option>
      </select>
      <input type="text" name="q" placeholder="검색어를 입력하세요">
      <input type="submit" value="검색">

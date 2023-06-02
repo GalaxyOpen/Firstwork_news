@@ -58,7 +58,12 @@ public class ArticleController {
             //하단에 보여줄 목록 데이터( 이전 / 숫자 / 다음)
             pagingDTO = articleService.pagingParam(page);
         }else{
-            articleDTOList = articleService.searchList(page, type, q);
+            if(type.equals("articleTitle")){
+                articleDTOList = articleService.searchByTitle(page,q);
+            }else if(type.equals("articleContents")){
+                articleDTOList = articleService.searchByContent(page,q);
+            }
+//            articleDTOList = articleService.searchList(page, type, q);
             pagingDTO = articleService.pagingSearchParam(page,type,q);
         }
         model.addAttribute("articleList", articleDTOList);

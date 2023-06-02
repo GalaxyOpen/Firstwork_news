@@ -9,13 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨.">
+    <list default="true" id="0b2081ec-65f3-4275-856f-69694c1cbec1" name="Changes" comment="2023.06.01 &#10;좋아요 기능 완전체">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/LikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/LikeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Like-Mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article/articleDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Repository/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/News/Service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Article-Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,14 +208,9 @@
       <workItem from="1685426679933" duration="800000" />
       <workItem from="1685491878982" duration="1362000" />
       <workItem from="1685520945692" duration="1150000" />
-      <workItem from="1685576712927" duration="3254000" />
-    </task>
-    <task id="LOCAL-00002" summary="2023.05.17. 프로젝트 제출 전&#10;일반 회원 가입 완료">
-      <created>1684287860578</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1684287860578</updated>
+      <workItem from="1685576712927" duration="3698000" />
+      <workItem from="1685582241030" duration="8576000" />
+      <workItem from="1685662385954" duration="7595000" />
     </task>
     <task id="LOCAL-00003" summary="2023.05.17. 프로젝트 제출 전&#10;일반 회원 정규식을 이메일과 비밀번호, 전화번호에 적용 완료">
       <created>1684289516676</created>
@@ -553,14 +548,20 @@
       <option name="project" value="LOCAL" />
       <updated>1685521113480</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="2023.06.01 &#10;좋아요 기능 완전체">
+      <created>1685581071083</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1685581071083</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2023.05.24. 기획안 제출 후&#10;댓글 회원 삭제 로직 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료" />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;기자 회원 삭제 로직 완료&#10;단, 삭제 버튼 구현화 해야함." />
     <MESSAGE value="2023.05.24. 기획안 제출 후&#10;삭제 버튼 구현 전 nav mypage 뒤의 '&gt;'삭제" />
@@ -585,6 +586,7 @@
     <MESSAGE value="2023.05.25. &#10;좋아요 기획한대로 동작. 그리고 index 일부 수정" />
     <MESSAGE value="2023.05.25. &#10;nav 수정. 기사 목록(/article/list는 관리자만 볼 수 있도록 설정)" />
     <MESSAGE value="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨." />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.05.25. &#10;좋아요 기능 수정 완료 &#10;단, 로그아웃하고 재로그인 시 좋아요 버튼이 활성화 됨." />
+    <MESSAGE value="2023.06.01 &#10;좋아요 기능 완전체" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.06.01 &#10;좋아요 기능 완전체" />
   </component>
 </project>

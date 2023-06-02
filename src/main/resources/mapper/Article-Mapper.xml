@@ -26,7 +26,18 @@
     </select>
 
     <select id="searchCount" parameterType="java.util.HashMap" resultType="Integer">
-        select count(id) from news_article where ${type} concat('%',#{q},'%')
+        <choose>
+            <when test="type == 'articleTitle'">
+                select count(id) from news_article where articleTitle like concat('%', #{q}, '%')
+            </when>
+            <when test="type == 'articleContent'">
+                select count(id) from news_article where articleContent like concat('%', #{q}, '%')
+            </when>
+            <!-- add more conditions if needed -->
+            <otherwise>
+                select count(id) from news_article
+            </otherwise>
+        </choose>
     </select>
 
     <select id="search" parameterType="java.util.HashMap" resultType="article">
@@ -61,6 +72,21 @@
     <delete id="deletePicture" parameterType="Long">
         delete from news_article_picture where id=#{id}
     </delete>
+
+    <select id="searchByTitle" parameterType="java.util.Map" resultType="article">
+        select * from news_article
+        where articleTitle like concat('%', #{q}, '%')
+            limit #{page}, 10
+    </select>
+
+    <select id="searchByContent" parameterType="java.util.Map" resultType="article">
+        select * from news_article
+        <where>
+            <if test="q != null and q != ''">
+                and articleContent like concat('%', #{q}, '%')
+            </if>
+        </where>
+    </select>
 
 </mapper>
 

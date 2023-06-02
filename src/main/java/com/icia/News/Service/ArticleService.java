@@ -215,4 +215,18 @@ public class ArticleService {
     public void delete(Long id) {
         articleRepository.delete(id);
     }
+
+    public List<ArticleDTO> searchByTitle(int page, String q) {
+        Map<String, Object> titleMap = new HashMap<>();
+        titleMap.put("page", page);
+        titleMap.put("q", q);
+        return articleRepository.searchByTitle(titleMap);
+    }
+
+    public List<ArticleDTO> searchByContent(int page, String q) {
+        Map<String, Object> contentMap = new HashMap<>();
+        contentMap.put("page", page);
+        contentMap.put("q", q);
+        return articleRepository.searchByContent(contentMap);
+    }
 }

@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -73,4 +74,13 @@ public class ArticleRepository {
     }
 
 
+
+    public List<ArticleDTO> searchByTitle(Map<String, Object> titleMap) {
+        return sql.selectList("Article.searchByTitle", titleMap);
+    }
+
+    public List<ArticleDTO> searchByContent(Map<String, Object> contentMap) {
+        return sql.selectList("Article.searchByContent", contentMap);
+    }
 }
+
